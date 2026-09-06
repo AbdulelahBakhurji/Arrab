@@ -8,16 +8,16 @@ type Language = 'en' | 'ar';
 
 const homeCopy = {
   en: {
-    overline: 'Two products. One Arrab.', title: 'AI for your work.\nAI for your life.', intro: 'Arrab is building two connected AI experiences: a workspace for intelligent teams, and a personal voice mentor designed to understand you over time.', choose: 'Choose an experience', studioLabel: 'For work', studioTitle: 'Arrab Studio', studioText: 'Build AI employees and multi-agent teams that work across projects, knowledge, tools, and code.', studioCta: 'Explore Studio', voiceLabel: 'For life', voiceTitle: 'Arrab Voice', voiceText: 'Talk with a personal AI mentor that helps you think, decide, grow, and get things done.', voiceCta: 'Explore Voice', inDevelopment: 'In development', studioPoints: ['AI Employees', 'Multi-agent teams', 'Arrab IDE'], voicePoints: ['Personal mentor', 'Thinking partner', 'Natural conversation'],
+    overline: 'Two products. One Arrab.', title: 'AI for your work.\nAI for your life.', intro: 'Arrab is building two connected AI experiences: a workspace for intelligent teams, and a personal voice mentor designed to understand you over time.', talk: 'Talk with us', choose: 'Choose an experience', studioLabel: 'For work', studioTitle: 'Arrab Studio', studioText: 'Build AI employees and multi-agent teams that work across projects, knowledge, tools, and code.', studioCta: 'Explore Studio', voiceLabel: 'For life', voiceTitle: 'Arrab Voice', voiceText: 'Talk with a personal AI mentor that helps you think, decide, grow, and get things done.', voiceCta: 'Explore Voice', inDevelopment: 'In development', studioPoints: ['AI Employees', 'Multi-agent teams', 'Arrab IDE'], voicePoints: ['Personal mentor', 'Thinking partner', 'Natural conversation'], ctaTitle: 'Ready to talk?', ctaText: 'Arrab Studio and Arrab Voice are in development. Talk with us about early access.',
   },
   ar: {
-    overline: 'منتجان. عرّاب واحد.', title: 'ذكاء لعملك.\nوذكاء لحياتك.', intro: 'نبني في عرّاب تجربتين مترابطتين: مساحة عمل لفرق الذكاء الاصطناعي، ومرشدًا صوتيًا شخصيًا يفهمك أكثر مع الوقت.', choose: 'اختر تجربتك', studioLabel: 'للعمل', studioTitle: 'عرّاب ستوديو', studioText: 'ابنِ موظفين وفرقًا من وكلاء الذكاء الاصطناعي يعملون عبر المشاريع والمعرفة والأدوات والبرمجة.', studioCta: 'اكتشف عرّاب ستوديو', voiceLabel: 'للحياة', voiceTitle: 'عرّاب فويس', voiceText: 'تحدث مع مرشد ذكاء اصطناعي شخصي يساعدك على التفكير واتخاذ القرار والتطور وإنجاز مهامك.', voiceCta: 'اكتشف عرّاب فويس', inDevelopment: 'قيد التطوير', studioPoints: ['موظفو ذكاء اصطناعي', 'فرق متعددة الوكلاء', 'بيئة عرّاب البرمجية'], voicePoints: ['مرشد شخصي', 'شريك في التفكير', 'محادثة طبيعية'],
+    overline: 'منتجان. عرّاب واحد.', title: 'ذكاء لعملك.\nوذكاء لحياتك.', intro: 'نبني في عرّاب تجربتين مترابطتين: مساحة عمل لفرق الذكاء الاصطناعي، ومرشدًا صوتيًا شخصيًا يفهمك أكثر مع الوقت.', talk: 'تحدث معنا', choose: 'اختر تجربتك', studioLabel: 'للعمل', studioTitle: 'عرّاب ستوديو', studioText: 'ابنِ موظفين وفرقًا من وكلاء الذكاء الاصطناعي يعملون عبر المشاريع والمعرفة والأدوات والبرمجة.', studioCta: 'اكتشف عرّاب ستوديو', voiceLabel: 'للحياة', voiceTitle: 'عرّاب فويس', voiceText: 'تحدث مع مرشد ذكاء اصطناعي شخصي يساعدك على التفكير واتخاذ القرار والتطور وإنجاز مهامك.', voiceCta: 'اكتشف عرّاب فويس', inDevelopment: 'قيد التطوير', studioPoints: ['موظفو ذكاء اصطناعي', 'فرق متعددة الوكلاء', 'بيئة عرّاب البرمجية'], voicePoints: ['مرشد شخصي', 'شريك في التفكير', 'محادثة طبيعية'], ctaTitle: 'جاهز للحديث؟', ctaText: 'عرّاب ستوديو وعرّاب فويس قيد التطوير. تحدث معنا عن الوصول المبكر.',
   },
 };
 
 function Header({ language, setLanguage, dark, setDark }: { language: Language; setLanguage: (language: Language) => void; dark: boolean; setDark: (dark: boolean) => void }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const nav = language === 'en' ? { home: 'Home', studio: 'Studio', voice: 'Voice', contact: 'Contact' } : { home: 'الرئيسية', studio: 'ستوديو', voice: 'فويس', contact: 'تواصل معنا' };
+  const nav = language === 'en' ? { home: 'Home', studio: 'Studio', voice: 'Voice', contact: 'Talk with us' } : { home: 'الرئيسية', studio: 'ستوديو', voice: 'فويس', contact: 'تحدث معنا' };
   return (
     <header className="site-header">
       <a className="brand" href="/" aria-label="Arrab home"><img src="/arrab-logo.png" alt="Arrab" /></a>
@@ -39,7 +39,12 @@ function HomeView({ language }: { language: Language }) {
   return (
     <main className="home-page"><section className="home-hero">
       <div className="ambient ambient-one" /><div className="ambient ambient-two" />
-      <div className="home-intro"><p className="overline"><span /> {copy.overline}</p><h1>{copy.title.split('\n').map((line, index) => <span key={line} className={index === 1 ? 'muted-line' : ''}>{line}</span>)}</h1><p className="intro-copy">{copy.intro}</p></div>
+      <div className="home-intro">
+        <p className="overline"><span /> {copy.overline}</p>
+        <h1>{copy.title.split('\n').map((line, index) => <span key={line} className={index === 1 ? 'muted-line' : ''}>{line}</span>)}</h1>
+        <p className="intro-copy">{copy.intro}</p>
+        <div className="home-actions"><a className="primary-button" href="mailto:info@arrabai.com">{copy.talk}<Mail size={16}/></a></div>
+      </div>
       <div className="product-heading"><span>{copy.choose}</span><i /></div>
       <div className="product-grid">
         <a className="product-card studio-card" href="/studio">
@@ -53,7 +58,9 @@ function HomeView({ language }: { language: Language }) {
           <div className="product-copy"><div><span className="card-number">02</span><h2>{copy.voiceTitle}</h2></div><p>{copy.voiceText}</p><div className="product-points">{copy.voicePoints.map(point => <span key={point}>{point}</span>)}</div><strong>{copy.voiceCta} <ArrowRight size={18}/></strong></div>
         </a>
       </div>
-    </section></main>
+    </section>
+    <ProductCta language={language} title={copy.ctaTitle} text={copy.ctaText} buttonLabel={copy.talk}/>
+    </main>
   );
 }
 
@@ -132,8 +139,9 @@ function VoiceView({ language }: { language: Language }) {
   </main>;
 }
 
-function ProductCta({ language, title, text }: { language: Language; title: string; text: string }) {
-  return <section className="product-cta"><img src="/arrab-symbol.png" alt=""/><div><div className="section-label">Arrab · Early access</div><h2>{title}</h2><p>{text}</p><a className="primary-button" href="mailto:info@arrabai.com">{language==='en'?'Contact info@arrabai.com':'تواصل عبر info@arrabai.com'}<Mail size={16}/></a></div></section>;
+function ProductCta({ language, title, text, buttonLabel }: { language: Language; title: string; text: string; buttonLabel?: string }) {
+  const label = buttonLabel ?? (language === 'en' ? 'Talk with us' : 'تحدث معنا');
+  return <section className="product-cta"><img src="/arrab-symbol.png" alt=""/><div><div className="section-label">Arrab · Early access</div><h2>{title}</h2><p>{text}</p><a className="primary-button" href="mailto:info@arrabai.com">{label}<Mail size={16}/></a></div></section>;
 }
 
 export function ArrabSite({ view }: { view: View }) {
