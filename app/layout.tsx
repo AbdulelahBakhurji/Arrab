@@ -6,8 +6,8 @@ const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Arrab — Build your AI workforce',
-  description: 'Create AI employees and multi-agent teams inside one connected AI workspace.',
+  title: 'Arrab — AI for your work and your life',
+  description: 'Discover Arrab Studio for AI teams and Arrab Voice, your personal AI mentor.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
