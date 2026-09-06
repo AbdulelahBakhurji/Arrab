@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ArrowRight, Bot, BrainCircuit, Check, Code2, Compass, GitBranch, HeartHandshake, Languages, LockKeyhole, Mail, Menu, MessageSquare, Mic2, Moon, Network, ShieldCheck, Sparkles, Sun, Target, Terminal, X } from 'lucide-react';
+import { ArrowRight, Bot, BrainCircuit, Check, Code2, Compass, GitBranch, HeartHandshake, Languages, LockKeyhole, Mail, Menu, MessageSquare, Mic2, Moon, Network, ShieldCheck, Sparkles, Sun, Terminal, X } from 'lucide-react';
 
 type View = 'home' | 'studio' | 'voice';
 type Language = 'en' | 'ar';
@@ -72,7 +72,7 @@ const detailCopy = {
       knows: 'An AI that knows you', knowsText: 'With your permission, Arrab can understand your goals, habits, projects, challenges, and what matters to you.', honest: 'Honest by design', honestText: 'A useful mentor should not agree with every idea. Arrab can question assumptions and challenge your reasoning with care.', thinking: 'Your thinking partner', thinkingText: 'Talk through difficult decisions, examine different perspectives, and reach your own conclusion with greater clarity.', heavy: 'When life gets heavy', heavyText: 'Sometimes you need advice. Sometimes perspective. Sometimes you simply need somewhere to talk.',
       roles: 'One AI. Many roles.', rolesText: 'Mentor when you need direction. Advisor when you face a decision. Assistant when something needs to get done.',
       arabic: 'Arabic from the foundation', arabicText: 'Arrab Voice is being designed for the language, dialects, culture, expressions, and natural way Arabic speakers communicate—including conversations that move between Arabic and English.',
-      yours: 'Your Arrab becomes yours.', yoursText: 'Choose a style that fits you: supportive, direct, challenging, analytical, or somewhere in between.',
+      yours: 'It understands you through conversation.', yoursText: 'There is nothing to configure. Talk naturally, and Arrab learns how to support your thinking, when to challenge you, and when to simply listen.',
     },
   },
   ar: {
@@ -89,7 +89,7 @@ const detailCopy = {
       knows: 'ذكاء يعرفك', knowsText: 'بإذنك، يستطيع عرّاب فهم أهدافك وعاداتك ومشاريعك وتحدياتك وما يهمك حقًا.', honest: 'صادق بطبيعته', honestText: 'المرشد المفيد لا يوافق على كل فكرة. يستطيع عرّاب مساءلة افتراضاتك وتحدي تفكيرك باهتمام.', thinking: 'شريكك في التفكير', thinkingText: 'ناقش القرارات الصعبة، وانظر إلى زوايا مختلفة، واصل إلى قرارك بوضوح أكبر.', heavy: 'عندما تثقل الحياة', heavyText: 'أحيانًا تحتاج نصيحة، وأحيانًا منظورًا مختلفًا، وأحيانًا تحتاج فقط إلى من تتحدث معه.',
       roles: 'ذكاء واحد. أدوار عديدة.', rolesText: 'مرشد عندما تحتاج الاتجاه، ومستشار أمام القرار، ومساعد عندما تحتاج إلى إنجاز أمر.',
       arabic: 'العربية من الأساس', arabicText: 'نصمم عرّاب فويس للغة العربية ولهجاتها وثقافتها وتعبيراتها وطريقة أهلها الطبيعية في الحديث، بما في ذلك التنقل بين العربية والإنجليزية.',
-      yours: 'عرّابك يصبح لك.', yoursText: 'اختر الأسلوب الذي يناسبك: داعم، مباشر، متحدٍ، تحليلي، أو مزيج بينها.',
+      yours: 'يفهمك من خلال الحديث.', yoursText: 'لا تحتاج إلى اختيار أسلوب أو ضبط إعدادات. تحدث بطبيعتك، ومع الوقت يفهم عرّاب كيف يساعدك، ومتى يتحدّى تفكيرك، ومتى يكتفي بالاستماع.',
     },
   },
 };
@@ -119,15 +119,15 @@ function StudioDemo({ language }: { language: Language }) {
 function VoiceView({ language }: { language: Language }) {
   const c = detailCopy[language]; const copy = c.voice;
   const ui = language === 'en' ? {
-    private: 'Private by design', live: 'Listening', prompt: 'What is taking most of your attention today?', reply: 'I need to make a difficult decision.', clarity: 'Let’s separate what is urgent from what is important.', designed: 'Designed around you', manyRoles: 'Adapts to the moment', language: 'Arabic & English', personal: 'Your preferred style', contact: 'Follow Arrab Voice',
+    private: 'Private by design', live: 'Listening', prompt: 'What is taking most of your attention today?', reply: 'I need to make a difficult decision.', clarity: 'Let’s separate what is urgent from what is important.', designed: 'Designed around you', manyRoles: 'Adapts to the moment', language: 'Arabic & English', personal: 'Learns through dialogue', contact: 'Follow Arrab Voice',
   } : {
-    private: 'الخصوصية أولاً', live: 'يستمع إليك', prompt: 'ما أكثر شيء يشغل تفكيرك اليوم؟', reply: 'أحتاج إلى اتخاذ قرار صعب.', clarity: 'لنفرّق أولاً بين ما هو عاجل وما هو مهم.', designed: 'مصمم من أجلك', manyRoles: 'يتكيّف مع اللحظة', language: 'العربية والإنجليزية', personal: 'أسلوب يناسبك', contact: 'تابع عرّاب فويس',
+    private: 'الخصوصية أولاً', live: 'يستمع إليك', prompt: 'ما أكثر شيء يشغل تفكيرك اليوم؟', reply: 'أحتاج إلى اتخاذ قرار صعب.', clarity: 'لنفرّق أولاً بين ما هو عاجل وما هو مهم.', designed: 'مصمم من أجلك', manyRoles: 'يتكيّف مع اللحظة', language: 'العربية والإنجليزية', personal: 'يتعلم من الحوار', contact: 'تابع عرّاب فويس',
   };
   const features = [{icon:BrainCircuit,title:copy.knows,text:copy.knowsText},{icon:ShieldCheck,title:copy.honest,text:copy.honestText},{icon:Compass,title:copy.thinking,text:copy.thinkingText},{icon:HeartHandshake,title:copy.heavy,text:copy.heavyText}];
   return <main className="detail-page voice-page"><section className="detail-hero voice-detail-hero"><DetailTop language={language} product="voice"/><div className="detail-hero-grid"><div className="voice-hero-copy"><p className="overline"><Mic2 size={15}/>{copy.eyebrow}</p><h1>{copy.title}</h1><p>{copy.intro}</p><div className="detail-actions"><a className="primary-button" href="mailto:info@arrabai.com">{copy.primary}<Mail size={16}/></a><a className="secondary-button" href="/studio">{copy.secondary}<ArrowRight size={16}/></a></div><div className="trust-row"><span><ShieldCheck size={15}/>{ui.private}</span><span><Languages size={15}/>{ui.language}</span></div></div><div className="voice-console" aria-label="Arrab Voice conversation preview"><div className="voice-console-head"><span><img src="/arrab-symbol.png" alt=""/>Arrab Voice</span><i/>{ui.live}</div><div className="voice-conversation"><p className="arrab-line"><span>A</span>{ui.prompt}</p><p className="user-line">{ui.reply}</p><p className="arrab-line"><span>A</span>{ui.clarity}</p></div><div className="voice-input"><Mic2 size={18}/><div className="audio-wave" aria-hidden="true">{[8,15,22,12,28,18,10,24,16,7,19,12].map((height,i)=><i key={i} style={{height}}/>)}</div><strong>{ui.live}</strong></div></div></div></section>
     <section className="detail-section voice-features"><div className="section-intro"><div className="section-label">01 · {ui.designed}</div><h2>{ui.designed}</h2></div><div className="voice-feature-grid">{features.map(({icon:Icon,title,text},i)=><article key={title}><div><Icon size={20}/><span>0{i+1}</span></div><h3>{title}</h3><p>{text}</p></article>)}</div></section>
     <section className="roles-band"><div><div className="section-label">02 · {ui.manyRoles}</div><h2>{copy.roles}</h2><p>{copy.rolesText}</p></div><div className="role-list">{['Mentor','Advisor','Assistant','Thinking partner','Teacher','Listener'].map((role,i)=><span key={role}><i>0{i+1}</i>{language==='ar'?['مرشد','مستشار','مساعد','شريك تفكير','معلّم','مستمع'][i]:role}<ArrowRight size={14}/></span>)}</div></section>
-    <section className="voice-split"><article><Languages size={22}/><div className="section-label">03 · {ui.language}</div><h2>{copy.arabic}</h2><p>{copy.arabicText}</p><div className="language-pair"><b>العربية</b><span>+</span><b>English</b></div></article><article><Target size={22}/><div className="section-label">04 · {ui.personal}</div><h2>{copy.yours}</h2><p>{copy.yoursText}</p><div className="style-tags"><span>{language==='ar'?'داعم':'Supportive'}</span><span>{language==='ar'?'مباشر':'Direct'}</span><span>{language==='ar'?'متحدٍ':'Challenging'}</span><span>{language==='ar'?'تحليلي':'Analytical'}</span></div></article></section>
+    <section className="voice-split"><article><Languages size={22}/><div className="section-label">03 · {ui.language}</div><h2>{copy.arabic}</h2><p>{copy.arabicText}</p><div className="language-pair"><b>العربية</b><span>+</span><b>English</b></div></article><article><MessageSquare size={22}/><div className="section-label">04 · {ui.personal}</div><h2>{copy.yours}</h2><p>{copy.yoursText}</p><div className="learning-flow">{(language==='ar'?['يستمع','يفهم','يتكيّف']:['Listens','Understands','Adapts']).map((step,index)=><span key={step}>{step}{index<2&&<ArrowRight size={13}/>}</span>)}</div></article></section>
     <section className="voice-final"><img src="/arrab-symbol.png" alt=""/><div><div className="section-label">Arrab Voice · Early access</div><h2>{language==='en'?'A clearer conversation starts here.':'محادثة أوضح تبدأ من هنا.'}</h2><p>{language==='en'?'Arrab Voice is in development. Contact us to follow the journey.':'عرّاب فويس قيد التطوير. تواصل معنا لمتابعة الرحلة.'}</p></div><a className="primary-button" href="mailto:info@arrabai.com">{ui.contact}<Mail size={16}/></a></section>
   </main>;
 }

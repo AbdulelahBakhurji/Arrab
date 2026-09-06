@@ -8,6 +8,11 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Arrab — AI for your work and your life',
   description: 'Discover Arrab Studio for AI teams and Arrab Voice, your personal AI mentor.',
+  icons: {
+    icon: [{ url: '/arrab-symbol.png', type: 'image/png' }],
+    shortcut: '/arrab-symbol.png',
+    apple: '/arrab-symbol.png',
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
