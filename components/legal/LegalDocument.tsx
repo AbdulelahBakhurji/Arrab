@@ -11,29 +11,38 @@ type LegalDocumentProps = {
   active: 'privacy' | 'terms';
   toc: TocItem[];
   children: ReactNode;
+  bilingual?: boolean;
 };
 
-export function LegalDocument({ title, description, active, toc, children }: LegalDocumentProps) {
+export function LegalDocument({
+  title,
+  description,
+  active,
+  toc,
+  children,
+  bilingual = false,
+}: LegalDocumentProps) {
   useEffect(() => {
     document.title = title;
     document.documentElement.classList.remove('light');
     document.documentElement.lang = 'en';
     document.documentElement.dir = 'ltr';
     document.body.classList.add('legal-doc');
+    document.body.classList.toggle('legal-bilingual', bilingual);
     const theme = document.querySelector('meta[name="theme-color"]');
     if (theme) theme.setAttribute('content', '#f7f7f8');
     return () => {
-      document.body.classList.remove('legal-doc');
+      document.body.classList.remove('legal-doc', 'legal-bilingual');
     };
-  }, [title]);
+  }, [title, bilingual]);
 
   return (
     <>
-      <link rel="stylesheet" href="/legal/styles.css?v=2" />
+      <link rel="stylesheet" href="/legal/styles.css?v=3" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       <link
-        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
       <meta name="description" content={description} />
@@ -50,7 +59,7 @@ export function LegalDocument({ title, description, active, toc, children }: Leg
           </Link>
         </nav>
       </header>
-      <div className="layout">
+      <div className={`layout${bilingual ? ' layout-bilingual' : ''}`}>
         <aside className="toc" aria-label="On this page">
           <p>On this page</p>
           <ol>
@@ -61,7 +70,7 @@ export function LegalDocument({ title, description, active, toc, children }: Leg
             ))}
           </ol>
         </aside>
-        <article className="article">{children}</article>
+        <article className={`article${bilingual ? ' article-bilingual' : ''}`}>{children}</article>
       </div>
     </>
   );
