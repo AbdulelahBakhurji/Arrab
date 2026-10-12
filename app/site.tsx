@@ -147,14 +147,15 @@ function ProductCta({ language, title, text, buttonLabel }: { language: Language
 
 function SiteFooter({ language }: { language: Language }) {
   const copy = language === 'en'
-    ? { privacy: 'Privacy', terms: 'Terms', rights: '© 2026 Arrab' }
-    : { privacy: 'الخصوصية', terms: 'الشروط', rights: '© 2026 عرّاب' };
+    ? { privacy: 'Privacy', terms: 'Terms', refund: 'Refund', rights: '© 2026 Arrab' }
+    : { privacy: 'الخصوصية', terms: 'الشروط', refund: 'الاسترجاع', rights: '© 2026 عرّاب' };
   return (
     <footer className="site-footer">
       <span>{copy.rights}</span>
       <nav aria-label={language === 'en' ? 'Legal' : 'قانوني'}>
         <Link href="/privacy">{copy.privacy}</Link>
         <Link href="/terms">{copy.terms}</Link>
+        <Link href="/refund">{copy.refund}</Link>
       </nav>
     </footer>
   );

@@ -346,12 +346,19 @@ a:hover { color: #0b3ec7; }
 }
 
 .article-bilingual .bilingual-ar,
-.article-bilingual p[lang='ar'] {
+.article-bilingual p[lang='ar'],
+.article-bilingual ul[lang='ar'] {
   font-family: var(--font-ar);
   font-size: 1.02rem;
   line-height: 1.85;
   color: #2a2a2a;
   text-align: right;
+}
+
+.article-bilingual ul[lang='ar'] {
+  padding-right: 1.2rem;
+  padding-left: 0;
+  list-style-position: outside;
 }
 
 .article-bilingual .lead {
