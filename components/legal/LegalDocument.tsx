@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, type ReactNode } from 'react';
 
 type TocItem = { id: string; label: string };
@@ -37,16 +38,16 @@ export function LegalDocument({ title, description, active, toc, children }: Leg
       />
       <meta name="description" content={description} />
       <header className="topbar">
-        <a className="brand" href="/">
+        <Link className="brand" href="/">
           <img src="/legal/assets/logotall-white.png?v=1" alt="Arrab" />
-        </a>
+        </Link>
         <nav className="top-links" aria-label="Legal">
-          <a className={active === 'terms' ? 'is-active' : undefined} href="/terms">
+          <Link className={active === 'terms' ? 'is-active' : undefined} href="/terms">
             Terms
-          </a>
-          <a className={active === 'privacy' ? 'is-active' : undefined} href="/privacy">
+          </Link>
+          <Link className={active === 'privacy' ? 'is-active' : undefined} href="/privacy">
             Privacy
-          </a>
+          </Link>
         </nav>
       </header>
       <div className="layout">

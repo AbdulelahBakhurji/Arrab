@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { LegalDocument } from '@/components/legal/LegalDocument';
 
 export const metadata: Metadata = {
@@ -43,7 +44,7 @@ export default function TermsPage() {
 
       <div className="note">
         By creating an account, signing in, or using the Services, you agree to these Terms and our{' '}
-        <a href="/privacy">Privacy Policy</a>. If you do not agree, do not use the Services.
+        <Link href="/privacy">Privacy Policy</Link>. If you do not agree, do not use the Services.
       </div>
 
       <h2 id="agreement">1. Agreement to the Terms</h2>
@@ -221,7 +222,7 @@ export default function TermsPage() {
       </ul>
 
       <p className="footer">
-        © 2026 Arrab. All rights reserved. Related: <a href="/privacy">Privacy Policy</a>.
+        © 2026 Arrab. All rights reserved. Related: <Link href="/privacy">Privacy Policy</Link>.
       </p>
     </LegalDocument>
   );

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { ArrowRight, Bot, BrainCircuit, Check, Code2, Compass, GitBranch, HeartHandshake, Languages, LockKeyhole, Mail, Menu, MessageSquare, Mic2, Moon, Network, ShieldCheck, Sparkles, Sun, Terminal, X } from 'lucide-react';
 

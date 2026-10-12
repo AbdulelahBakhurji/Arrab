@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { LegalDocument } from '@/components/legal/LegalDocument';
 
 export const metadata: Metadata = {
@@ -43,7 +44,7 @@ export default function PrivacyPage() {
 
       <div className="note">
         By using the Services, you acknowledge this Policy. For how you may use Arrab, see our{' '}
-        <a href="/terms">Terms of Use</a>.
+        <Link href="/terms">Terms of Use</Link>.
       </div>
 
       <h2 id="scope">1. Scope and controller</h2>
@@ -249,7 +250,7 @@ export default function PrivacyPage() {
       </ul>
 
       <p className="footer">
-        © 2026 Arrab. All rights reserved. Related: <a href="/terms">Terms of Use</a>.
+        © 2026 Arrab. All rights reserved. Related: <Link href="/terms">Terms of Use</Link>.
       </p>
     </LegalDocument>
   );
