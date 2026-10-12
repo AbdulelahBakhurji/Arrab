@@ -36,3 +36,7 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# Next.js agent rules
+AGENTS.md
+CLAUDE.md
