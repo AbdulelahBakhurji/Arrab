@@ -153,8 +153,8 @@ function SiteFooter({ language }: { language: Language }) {
     <footer className="site-footer">
       <span>{copy.rights}</span>
       <nav aria-label={language === 'en' ? 'Legal' : 'قانوني'}>
-        <a href="/privacy">{copy.privacy}</a>
-        <a href="/terms">{copy.terms}</a>
+        <Link href="/privacy">{copy.privacy}</Link>
+        <Link href="/terms">{copy.terms}</Link>
       </nav>
     </footer>
   );
