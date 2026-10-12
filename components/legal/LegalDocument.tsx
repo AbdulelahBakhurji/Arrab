@@ -38,7 +38,7 @@ export function LegalDocument({
 
   return (
     <>
-      <link rel="stylesheet" href="/legal/styles.css?v=3" />
+      <link rel="stylesheet" href="/legal/styles.css?v=4" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       <link
