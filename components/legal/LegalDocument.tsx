@@ -8,7 +8,7 @@ type TocItem = { id: string; label: string };
 type LegalDocumentProps = {
   title: string;
   description: string;
-  active: 'privacy' | 'terms';
+  active: 'privacy' | 'terms' | 'refund';
   toc: TocItem[];
   children: ReactNode;
   bilingual?: boolean;
@@ -38,7 +38,7 @@ export function LegalDocument({
 
   return (
     <>
-      <link rel="stylesheet" href="/legal/styles.css?v=4" />
+      <link rel="stylesheet" href="/legal/styles.css?v=5" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       <link
@@ -56,6 +56,9 @@ export function LegalDocument({
           </Link>
           <Link className={active === 'privacy' ? 'is-active' : undefined} href="/privacy">
             Privacy
+          </Link>
+          <Link className={active === 'refund' ? 'is-active' : undefined} href="/refund">
+            Refund
           </Link>
         </nav>
       </header>
