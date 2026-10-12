@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { Globe } from 'lucide-react';
 import { useEffect, useState, type ReactNode } from 'react';
 
 type TocItem = { id: string; label: string; labelAr?: string };
@@ -62,7 +63,7 @@ export function LegalDocument({
 
   return (
     <>
-      <link rel="stylesheet" href="/legal/styles.css?v=6" />
+      <link rel="stylesheet" href="/legal/styles.css?v=7" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       <link
@@ -76,24 +77,15 @@ export function LegalDocument({
         </Link>
         <div className="topbar-actions">
           {bilingual && (
-            <div className="lang-toggle" role="group" aria-label="Language">
-              <button
-                type="button"
-                className={language === 'en' ? 'is-active' : undefined}
-                onClick={() => setLanguage('en')}
-                aria-pressed={language === 'en'}
-              >
-                English
-              </button>
-              <button
-                type="button"
-                className={language === 'ar' ? 'is-active' : undefined}
-                onClick={() => setLanguage('ar')}
-                aria-pressed={language === 'ar'}
-              >
-                العربية
-              </button>
-            </div>
+            <button
+              type="button"
+              className="lang-icon-button"
+              onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
+              aria-label={language === 'en' ? 'Switch to Arabic' : 'التبديل إلى الإنجليزية'}
+              title={language === 'en' ? 'العربية' : 'English'}
+            >
+              <Globe size={18} strokeWidth={1.75} aria-hidden="true" />
+            </button>
           )}
           <nav className="top-links" aria-label="Legal">
             <Link className={active === 'terms' ? 'is-active' : undefined} href="/terms">
