@@ -10,75 +10,83 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/legal/styles.css?v=5" />
+  <link rel="stylesheet" href="/legal/styles.css?v=6" />
 </head>
-<body class="legal-doc legal-bilingual">
+<body class="legal-doc legal-bilingual legal-lang-en">
   <header class="topbar">
-    <a class="brand" href="/"><img src="/legal/assets/logotall-white.png?v=1" alt="Arrab" /></a>
-    <nav class="top-links" aria-label="Legal">
-      <a href="/terms">Terms</a>
-      <a href="/privacy">Privacy</a>
-      <a class="is-active" href="/refund">Refund</a>
-    </nav>
+    <a class="brand" href="/">
+      <img src="/legal/assets/logotall-white.png?v=1" alt="Arrab" />
+    </a>
+    <div class="topbar-actions">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="is-active" aria-pressed="true">English</button>
+        <button type="button" data-lang="ar" aria-pressed="false">العربية</button>
+      </div>
+      <nav class="top-links" aria-label="Legal">
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+        <a class="is-active" href="/refund">Refund</a>
+      </nav>
+    </div>
   </header>
+
   <div class="layout layout-bilingual">
     <aside class="toc" aria-label="On this page">
       <p>On this page</p>
       <ol>
-        <li><a href="#cancel">1. Cancellation / إلغاء الاشتراك</a></li>
-        <li><a href="#eligible">2. Eligible refunds / الحالات المؤهلة</a></li>
-        <li><a href="#non-eligible">3. Non-eligible / الحالات غير المؤهلة</a></li>
-        <li><a href="#request">4. How to request / آلية الطلب</a></li>
-        <li><a href="#processing">5. Processing time / مدة المعالجة</a></li>
-        <li><a href="#app-stores">6. App stores / متاجر التطبيقات</a></li>
-        <li><a href="#disputes">7. Disputes / الاعتراض</a></li>
-        <li><a href="#rights">8. Legal rights / حقوقك النظامية</a></li>
-        <li><a href="#changes">9. Changes / التعديلات</a></li>
-        <li><a href="#contact">Contact / للتواصل معنا</a></li>
-</ol>
+        <li><a href="#cancel" data-label-en="1. Cancellation" data-label-ar="1. إلغاء الاشتراك">1. Cancellation</a></li>
+        <li><a href="#eligible" data-label-en="2. Eligible refunds" data-label-ar="2. الحالات المؤهلة">2. Eligible refunds</a></li>
+        <li><a href="#non-eligible" data-label-en="3. Non-eligible" data-label-ar="3. الحالات غير المؤهلة">3. Non-eligible</a></li>
+        <li><a href="#request" data-label-en="4. How to request" data-label-ar="4. آلية الطلب">4. How to request</a></li>
+        <li><a href="#processing" data-label-en="5. Processing time" data-label-ar="5. مدة المعالجة">5. Processing time</a></li>
+        <li><a href="#app-stores" data-label-en="6. App stores" data-label-ar="6. متاجر التطبيقات">6. App stores</a></li>
+        <li><a href="#disputes" data-label-en="7. Disputes" data-label-ar="7. الاعتراض">7. Disputes</a></li>
+        <li><a href="#rights" data-label-en="8. Legal rights" data-label-ar="8. حقوقك النظامية">8. Legal rights</a></li>
+        <li><a href="#changes" data-label-en="9. Changes" data-label-ar="9. التعديلات">9. Changes</a></li>
+        <li><a href="#contact" data-label-en="Contact" data-label-ar="للتواصل معنا">Contact</a></li>
+      </ol>
     </aside>
-    <article class="article article-bilingual">
+
+    <article class="article article-bilingual" lang="en" dir="ltr">
 <h1>
-        Refund and Cancellation Policy
-        <span class="title-ar" lang="ar" dir="rtl">
+        <span class="legal-en">Refund and Cancellation Policy</span>
+        <span class="title-ar legal-ar" lang="ar" dir="rtl">
           سياسة الاسترجاع والإلغاء
         </span>
       </h1>
-      <p class="meta">
-        سارية اعتباراً من تاريخ النشر على الموقع والتطبيق / Effective as of the date published on the
-        website and app
-      </p>
-      <p class="meta">Last Updated: 12/10/2026 / آخر تحديث: 12/10/2026</p>
+      <p class="meta meta-en legal-en">Effective as of the date published on the
+        website and app</p>
+      <p class="meta meta-ar legal-ar" lang="ar" dir="rtl">سارية اعتباراً من تاريخ النشر على الموقع والتطبيق</p>
+      <p class="meta meta-en legal-en">Last Updated: 12/10/2026</p>
+      <p class="meta meta-ar legal-ar" lang="ar" dir="rtl">آخر تحديث: 12/10/2026</p>
 
-      <p class="bilingual-ar" lang="ar" dir="rtl">
+      <p class="bilingual-ar legal-ar" lang="ar" dir="rtl">
         توضح هذه السياسة كيفية إلغاء اشتراكك في خدمات آراب سلوشنز جلوبال والحالات التي يحق لك فيها
         استرداد المبالغ المدفوعة، وذلك بما يتوافق مع نظام التجارة الإلكترونية ولوائحه التنفيذية في
         المملكة العربية السعودية.
       </p>
-      <p class="lead">
+      <p class="lead legal-en">
         This Policy explains how to cancel your subscription to Arrab Solutions Global’s services and
         the circumstances under which you are entitled to a refund, in accordance with the E-Commerce
         Law and its implementing regulations in the Kingdom of Saudi Arabia.
       </p>
 
-      <div class="note">
-        Related: <a href="/terms">Terms of Service</a> · 
-        <a href="/privacy">Privacy Policy</a>
-      </div>
+      <div class="note legal-en">Related: <a href="/terms">Terms of Service</a> · <a href="/privacy">Privacy Policy</a></div>
+      <div class="note legal-ar" lang="ar" dir="rtl">ذات صلة: <a href="/terms">شروط الاستخدام</a> · <a href="/privacy">سياسة الخصوصية</a></div>
 
       <h2 id="cancel">
-        1. Cancelling Your Subscription
-        <span lang="ar" dir="rtl">
+        <span class="legal-en">1. Cancelling Your Subscription</span>
+        <span class="legal-ar" lang="ar" dir="rtl">
           1. إلغاء الاشتراك
         </span>
       </h2>
-      <p class="bilingual-ar" lang="ar" dir="rtl">
+      <p class="bilingual-ar legal-ar" lang="ar" dir="rtl">
         يمكنك إلغاء اشتراكك في أي وقت ومن دون أي رسوم إضافية، وذلك من خلال إعدادات حسابك في الموقع أو
         التطبيق (الحساب ← الاشتراك ← إلغاء الاشتراك). عند الإلغاء، يستمر وصولك إلى الخدمة حتى نهاية
         دورة الفوترة الحالية التي سبق سدادها، ولن يُجدَّد الاشتراك تلقائياً بعد ذلك. وسنرسل إليك رسالة
         تأكيد على بريدك الإلكتروني المسجّل عند اكتمال الإلغاء.
       </p>
-      <p>
+      <p class="legal-en">
         You may cancel your subscription at any time and at no additional charge through your account
         settings on the website or app (Account → Subscription → Cancel Subscription). Upon
         cancellation, your access to the Service continues until the end of the current billing cycle
@@ -87,22 +95,22 @@
       </p>
 
       <h2 id="eligible">
-        2. Eligible Refund Cases
-        <span lang="ar" dir="rtl">
+        <span class="legal-en">2. Eligible Refund Cases</span>
+        <span class="legal-ar" lang="ar" dir="rtl">
           2. الحالات المؤهلة للاسترداد
         </span>
       </h2>
-      <p class="bilingual-ar" lang="ar" dir="rtl">
+      <p class="bilingual-ar legal-ar" lang="ar" dir="rtl">
         يحق لك طلب استرداد المبلغ المدفوع كاملاً في الحالات التالية:
       </p>
-      <ul class="bilingual-ar" lang="ar" dir="rtl">
+      <ul class="bilingual-ar legal-ar" lang="ar" dir="rtl">
         <li>إذا قدّمت طلب الإلغاء خلال 14 يوماً من تاريخ أول عملية دفع ولم تستخدم الخدمة بشكل جوهري خلال تلك المدة.</li>
         <li>إذا تكرر خصم المبلغ عن طريق الخطأ (ازدواج الفوترة).</li>
         <li>إذا تعذّر علينا تقديم الخدمة المدفوعة لأسباب تقنية تعود لنا وتعذّر إصلاحها خلال مدة معقولة.</li>
         <li>إذا جرى خصم مبلغ بعد إلغاء اشتراكك بنجاح.</li>
       </ul>
-      <p>You are entitled to a full refund of the amount paid in the following cases:</p>
-      <ul>
+      <p class="legal-en">You are entitled to a full refund of the amount paid in the following cases:</p>
+      <ul class="legal-en">
         <li>
           If you submit a cancellation request within 14 days of your first payment and have not made
           substantial use of the Service during that period.
@@ -116,15 +124,15 @@
       </ul>
 
       <h2 id="non-eligible">
-        3. Non-Eligible Cases
-        <span lang="ar" dir="rtl">
+        <span class="legal-en">3. Non-Eligible Cases</span>
+        <span class="legal-ar" lang="ar" dir="rtl">
           3. الحالات غير المؤهلة للاسترداد
         </span>
       </h2>
-      <p class="bilingual-ar" lang="ar" dir="rtl">
+      <p class="bilingual-ar legal-ar" lang="ar" dir="rtl">
         لا يحق لك طلب استرداد المبلغ في الحالات التالية:
       </p>
-      <ul class="bilingual-ar" lang="ar" dir="rtl">
+      <ul class="bilingual-ar legal-ar" lang="ar" dir="rtl">
         <li>بعد استخدام الخدمة استخداماً جوهرياً خلال دورة الفوترة الحالية.</li>
         <li>بعد انقضاء المدة المحددة في القسم السابق (14 يوماً) دون تقديم طلب.</li>
         <li>
@@ -133,8 +141,8 @@
         </li>
         <li>عن الفترة المتبقية من دورة الفوترة بعد إلغاء الاشتراك، إذ يستمر وصولك إلى الخدمة حتى نهايتها.</li>
       </ul>
-      <p>You are not entitled to a refund in the following cases:</p>
-      <ul>
+      <p class="legal-en">You are not entitled to a refund in the following cases:</p>
+      <ul class="legal-en">
         <li>After substantial use of the Service during the current billing cycle.</li>
         <li>
           After the period specified in the previous section (14 days) has lapsed without a request
@@ -151,18 +159,18 @@
       </ul>
 
       <h2 id="request">
-        4. How to Request a Refund
-        <span lang="ar" dir="rtl">
+        <span class="legal-en">4. How to Request a Refund</span>
+        <span class="legal-ar" lang="ar" dir="rtl">
           4. آلية تقديم طلب الاسترداد
         </span>
       </h2>
-      <p class="bilingual-ar" lang="ar" dir="rtl">
+      <p class="bilingual-ar legal-ar" lang="ar" dir="rtl">
         لتقديم طلب استرداد، يُرجى التواصل معنا عبر البريد الإلكتروني 
         <a href="mailto:refund@arrabai.com">refund@arrabai.com</a> مع ذكر البريد الإلكتروني المسجّل في
         حسابك، وسبب الطلب، وتاريخ عملية الدفع. سنقوم بمراجعة طلبك والرد عليك خلال 5 أيام عمل. وقد نطلب
         منك معلومات إضافية للتحقق من الطلب، وسيتم إشعارك بالقرار وأسبابه عبر البريد الإلكتروني.
       </p>
-      <p>
+      <p class="legal-en">
         To submit a refund request, please contact us at 
         <a href="mailto:refund@arrabai.com">refund@arrabai.com</a>, including the email address
         registered to your account, the reason for the request, and the date of the payment. We will
@@ -172,108 +180,166 @@
       </p>
 
       <h2 id="processing">
-        5. Refund Processing Time
-        <span lang="ar" dir="rtl">
+        <span class="legal-en">5. Refund Processing Time</span>
+        <span class="legal-ar" lang="ar" dir="rtl">
           5. مدة معالجة المبالغ المرتجعة
         </span>
       </h2>
-      <p class="bilingual-ar" lang="ar" dir="rtl">
+      <p class="bilingual-ar legal-ar" lang="ar" dir="rtl">
         عند الموافقة على طلبك، سيتم إعادة المبلغ كاملاً، شاملاً ضريبة القيمة المضافة، إلى وسيلة الدفع
         الأصلية التي استخدمتها خلال 5 أيام عمل من تاريخ الموافقة. وقد تختلف المدة الفعلية لظهور المبلغ
         في حسابك حسب مزود خدمة الدفع أو البنك الذي تتعامل معه.
       </p>
-      <p>
+      <p class="legal-en">
         Once your request is approved, the full amount, including VAT, will be refunded to the original
         payment method you used within 5 business days of approval. The actual time for the amount to
         appear in your account may vary depending on your payment provider or bank.
       </p>
 
       <h2 id="app-stores">
-        6. Payments Made Through App Stores
-        <span lang="ar" dir="rtl">
+        <span class="legal-en">6. Payments Made Through App Stores</span>
+        <span class="legal-ar" lang="ar" dir="rtl">
           6. المدفوعات عبر متاجر التطبيقات
         </span>
       </h2>
-      <p class="bilingual-ar" lang="ar" dir="rtl">
+      <p class="bilingual-ar legal-ar" lang="ar" dir="rtl">
         إذا اشتركت عبر متجر تطبيقات تابع لجهة خارجية (مثل App Store أو Google Play)، فإن الإلغاء
         والاسترداد يخضعان لسياسات تلك الجهة، وعليك تقديم الطلب من خلالها مباشرة.
       </p>
-      <p>
+      <p class="legal-en">
         If you subscribed through a third-party app store (such as the App Store or Google Play),
         cancellation and refunds are subject to that provider’s policies, and you must submit your
         request to them directly.
       </p>
 
       <h2 id="disputes">
-        7. Disputed Charges
-        <span lang="ar" dir="rtl">
+        <span class="legal-en">7. Disputed Charges</span>
+        <span class="legal-ar" lang="ar" dir="rtl">
           7. الاعتراض على المبالغ المخصومة
         </span>
       </h2>
-      <p class="bilingual-ar" lang="ar" dir="rtl">
+      <p class="bilingual-ar legal-ar" lang="ar" dir="rtl">
         نشجعك على التواصل معنا أولاً قبل تقديم اعتراض لدى البنك أو مزود الدفع، لنتمكن من حل المشكلة
         بأسرع وقت ممكن.
       </p>
-      <p>
+      <p class="legal-en">
         We encourage you to contact us first before filing a dispute with your bank or payment
         provider, so that we can resolve the issue as quickly as possible.
       </p>
 
       <h2 id="rights">
-        8. Your Legal Rights
-        <span lang="ar" dir="rtl">
+        <span class="legal-en">8. Your Legal Rights</span>
+        <span class="legal-ar" lang="ar" dir="rtl">
           8. حقوقك النظامية
         </span>
       </h2>
-      <p class="bilingual-ar" lang="ar" dir="rtl">
+      <p class="bilingual-ar legal-ar" lang="ar" dir="rtl">
         لا تؤثر هذه السياسة على أي حقوق مقررة لك بموجب نظام التجارة الإلكترونية أو أي أنظمة أخرى سارية
         في المملكة العربية السعودية، وفي حال وجود تعارض بين هذه السياسة والأنظمة المعمول بها، تُطبَّق
         الأنظمة.
       </p>
-      <p>
+      <p class="legal-en">
         This Policy does not affect any rights you have under the E-Commerce Law or any other applicable
         laws of the Kingdom of Saudi Arabia, and in the event of any conflict between this Policy and
         applicable laws, the applicable laws prevail.
       </p>
 
       <h2 id="changes">
-        9. Changes to This Policy
-        <span lang="ar" dir="rtl">
+        <span class="legal-en">9. Changes to This Policy</span>
+        <span class="legal-ar" lang="ar" dir="rtl">
           9. التعديلات على هذه السياسة
         </span>
       </h2>
-      <p class="bilingual-ar" lang="ar" dir="rtl">
+      <p class="bilingual-ar legal-ar" lang="ar" dir="rtl">
         قد نُحدّث هذه السياسة من وقت لآخر، وسننشر أي تعديل جوهري على هذه الصفحة مع تحديث تاريخ "آخر
         تحديث". ولا تسري التعديلات على المدفوعات التي تمت قبل تاريخ نشرها.
       </p>
-      <p>
+      <p class="legal-en">
         We may update this Policy from time to time, and we will post any material update on this page
         along with an updated “Last Updated” date. Updates do not apply to payments made before they were
         published.
       </p>
 
       <h2 id="contact">
-        Contact Us
-        <span lang="ar" dir="rtl">
+        <span class="legal-en">Contact Us</span>
+        <span class="legal-ar" lang="ar" dir="rtl">
           للتواصل معنا
         </span>
       </h2>
-      <p class="bilingual-ar" lang="ar" dir="rtl">
+      <p class="bilingual-ar legal-ar" lang="ar" dir="rtl">
         لأي استفسار بخصوص هذه الوثيقة، يُرجى التواصل عبر البريد الإلكتروني 
         <a href="mailto:refund@arrabai.com">refund@arrabai.com</a> أو عبر وسائل التواصل الموضحة في
         الموقع الرسمي أو التطبيق.
       </p>
-      <p>
+      <p class="legal-en">
         For any inquiries regarding this document, please contact us at 
         <a href="mailto:refund@arrabai.com">refund@arrabai.com</a> or through the contact channels
         listed on our official website or app.
       </p>
 
-      <p class="footer">
-        © 2026 Arrab Solutions Global. All rights reserved. Related: 
-        <a href="/terms">Terms of Service</a> · <a href="/privacy">Privacy Policy</a>.
-      </p>
+      <p class="footer legal-en">© 2026 Arrab Solutions Global. All rights reserved. Related: <a href="/terms">Terms of Service</a> · <a href="/privacy">Privacy Policy</a>.</p>
+      <p class="footer legal-ar" lang="ar" dir="rtl">© 2026 آراب سلوشنز جلوبال. جميع الحقوق محفوظة. ذات صلة: <a href="/terms">شروط الاستخدام</a> · <a href="/privacy">سياسة الخصوصية</a>.</p>
     </article>
   </div>
+
+<script>
+(function () {
+  var KEY = 'arrab-legal-lang';
+  var body = document.body;
+  var html = document.documentElement;
+  var buttons = document.querySelectorAll('.lang-toggle button');
+  var tocLinks = document.querySelectorAll('.toc a[data-label-en]');
+  var tocTitle = document.querySelector('.toc > p');
+  var nav = {
+    terms: document.querySelector('.top-links a[href="/terms"]'),
+    privacy: document.querySelector('.top-links a[href="/privacy"]'),
+    refund: document.querySelector('.top-links a[href="/refund"]')
+  };
+  var labels = {
+    en: { toc: 'On this page', terms: 'Terms', privacy: 'Privacy', refund: 'Refund' },
+    ar: { toc: 'في هذه الصفحة', terms: 'الشروط', privacy: 'الخصوصية', refund: 'الاسترجاع' }
+  };
+
+  function apply(lang) {
+    if (lang !== 'ar' && lang !== 'en') lang = 'en';
+    body.classList.toggle('legal-lang-en', lang === 'en');
+    body.classList.toggle('legal-lang-ar', lang === 'ar');
+    html.lang = lang;
+    html.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    var article = document.querySelector('.article');
+    if (article) {
+      article.lang = lang;
+      article.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    }
+    buttons.forEach(function (btn) {
+      var active = btn.getAttribute('data-lang') === lang;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    tocLinks.forEach(function (a) {
+      a.textContent = lang === 'ar' ? a.getAttribute('data-label-ar') : a.getAttribute('data-label-en');
+    });
+    if (tocTitle) tocTitle.textContent = labels[lang].toc;
+    if (nav.terms) nav.terms.textContent = labels[lang].terms;
+    if (nav.privacy) nav.privacy.textContent = labels[lang].privacy;
+    if (nav.refund) nav.refund.textContent = labels[lang].refund;
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  }
+
+  var initial = 'en';
+  try {
+    var stored = localStorage.getItem(KEY);
+    if (stored === 'ar' || stored === 'en') initial = stored;
+  } catch (e) {}
+  apply(initial);
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      apply(btn.getAttribute('data-lang'));
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
