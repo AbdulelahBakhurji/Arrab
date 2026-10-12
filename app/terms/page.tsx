@@ -30,7 +30,6 @@ export default function TermsPage() {
       toc={toc}
       bilingual
     >
-      <p className="eyebrow">Legal · قانوني</p>
       <h1>
         Terms of Service
         <span className="title-ar" lang="ar" dir="rtl">
