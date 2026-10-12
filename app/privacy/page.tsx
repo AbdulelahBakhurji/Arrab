@@ -4,253 +4,456 @@ import { LegalDocument } from '@/components/legal/LegalDocument';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy · Arrab',
-  description: 'Arrab Privacy Policy — how we collect, use, and protect personal data.',
+  description:
+    'Arrab Solutions Global Privacy Policy — سياسة الخصوصية explaining how we collect, use, and protect personal data.',
 };
 
 const toc = [
-  { id: 'scope', label: '1. Scope' },
-  { id: 'collect', label: '2. Data we collect' },
-  { id: 'use', label: '3. How we use data' },
-  { id: 'legal-bases', label: '4. Legal bases' },
-  { id: 'sharing', label: '5. Sharing' },
-  { id: 'processors', label: '6. Processors' },
-  { id: 'retention', label: '7. Retention' },
-  { id: 'security', label: '8. Security' },
-  { id: 'transfers', label: '9. International transfers' },
-  { id: 'rights', label: '10. Your rights' },
-  { id: 'children', label: '11. Children' },
-  { id: 'cookies', label: '12. Cookies' },
-  { id: 'ai-privacy', label: '13. AI processing' },
-  { id: 'changes', label: '14. Changes' },
-  { id: 'contact', label: '15. Contact' },
+  { id: 'collect', label: '1. Data we collect / البيانات الشخصية' },
+  { id: 'use', label: '2. How we use data / كيفية الاستخدام' },
+  { id: 'sharing', label: '3. Sharing / المشاركة' },
+  { id: 'retention', label: '4. Retention / مدة الاحتفاظ' },
+  { id: 'security', label: '5. Security / الأمان' },
+  { id: 'rights', label: '6. Your rights / حقوقك' },
+  { id: 'jurisdiction', label: '7. Jurisdiction / الولايات القضائية' },
+  { id: 'changes', label: '8. Changes / التعديلات' },
+  { id: 'contact', label: '9. Contact / التواصل معنا' },
 ];
 
 export default function PrivacyPage() {
   return (
     <LegalDocument
       title="Privacy Policy · Arrab"
-      description="Arrab Privacy Policy — how we collect, use, and protect personal data."
+      description="Arrab Solutions Global Privacy Policy — سياسة الخصوصية."
       active="privacy"
       toc={toc}
+      bilingual
     >
-      <p className="eyebrow">Legal</p>
-      <h1>Privacy Policy</h1>
-      <p className="meta">Effective: 14 September 2026 · Last updated: 14 September 2026</p>
+      <h1>
+        Privacy Policy
+        <span className="title-ar" lang="ar" dir="rtl">
+          سياسة الخصوصية
+        </span>
+      </h1>
+      <p className="meta">
+        سارية اعتباراً من تاريخ النشر على الموقع والتطبيق / Effective as of the date published on the
+        website and app
+      </p>
+      <p className="meta">Last Updated: 12/10/2026 / آخر تحديث: 12/10/2026</p>
+
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        نحن في آراب سلوشنز جلوبال (&quot;آراب&quot; أو &quot;نحن&quot; أو &quot;لنا&quot;) شركة عالمية تخدم
+        عملاء ومستخدمين حول العالم، وملتزمون التزاماً راسخاً باحترام خصوصيتك وحماية أي معلومات تشاركها
+        معنا أياً كان بلد إقامتك. توضح سياسة الخصوصية هذه كيفية جمعنا واستخدامنا والإفصاح عن بياناتك
+        الشخصية ومعالجتها عند استخدامك لموقعنا وتطبيقنا وواجهاتنا البرمجية (API) وخدماتنا (يُشار إليها
+        مجتمعة بـ&quot;الخدمة&quot;)، أينما كنت. يُرجى ملاحظة أن حلولنا تعتمد في تشغيلها على دمج نماذج
+        ذكاء اصطناعي من مزودين خارجيين (مثل مزودي النماذج اللغوية الكبيرة)، وتوضح هذه السياسة كيفية
+        تعاملنا مع بياناتك في هذا السياق. لا تنطبق هذه السياسة على المحتوى الذي نعالجه نيابة عن عملائنا
+        التجاريين الذين يستخدمون عروضنا التجارية، مثل واجهتنا البرمجية (API)؛ إذ يخضع استخدامنا لتلك
+        البيانات لاتفاقيات العملاء التي تحكم الوصول إلى تلك العروض واستخدامها.
+      </p>
       <p className="lead">
-        This Privacy Policy explains how Arrab (“Arrab”, “we”, “us”) collects, uses, discloses, and
-        protects personal data when you use our websites, authentication, APIs, applications, and
-        related services (the “Services”).
+        We at Arrab Solutions Global (&quot;Arrab&quot;, &quot;we&quot;, &quot;our&quot;, or
+        &quot;us&quot;) are a global company serving customers and users around the world, and are
+        strongly committed to respecting your privacy and protecting any information you share with us,
+        wherever you reside. This Privacy Policy explains how we collect, use, disclose, and process
+        your personal data when you use our website, application, APIs, and services (collectively, the
+        &quot;Service&quot;), wherever you are located. Please note that our solutions operate by
+        integrating AI models from third-party providers (such as large language model providers), and
+        this Policy explains how we handle your data in that context. This Policy does not apply to
+        content we process on behalf of our business customers using our commercial offerings, such as
+        our API; our use of that data is governed by the customer agreements covering access to and use
+        of those offerings.
       </p>
 
       <div className="note">
-        By using the Services, you acknowledge this Policy. For how you may use Arrab, see our{' '}
-        <Link href="/terms">Terms of Use</Link>.
+        Related: <Link href="/terms">Terms of Service</Link> ·{' '}
+        <Link href="/terms">شروط الاستخدام</Link>
       </div>
 
-      <h2 id="scope">1. Scope and controller</h2>
-      <p>
-        Arrab is the controller of personal data processed in connection with account registration,
-        authentication, billing, and product administration, unless a written agreement states
-        otherwise (for example, when we process Customer Content solely as a processor for an
-        organization customer).
+      <h2 id="collect">
+        1. Personal Data We Collect
+        <span lang="ar" dir="rtl">
+          1. البيانات الشخصية التي نجمعها
+        </span>
+      </h2>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        أ) بيانات تقدمها لنا مباشرة: بيانات الحساب (الاسم والبريد الإلكتروني ووسيلة الدخول)، معلومات
+        الدفع عند الاشتراك في خطة مدفوعة، المُدخلات والمخرجات (Inputs &amp; Outputs) — أي محتوى تُدخله في
+        مطالباتك والردود التي تُنتجها الخدمة بناءً عليها؛ إذا ضمّنت بيانات شخصية في مُدخلاتك فقد تنعكس
+        تلك البيانات في المخرجات التي نعرضها لك، بيانات التواصل عند مراسلتنا، والملاحظات (Feedback)
+        التي تزودنا بها كتقييمك لردود النماذج.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        ب) بيانات نستقبلها تلقائياً من استخدامك للخدمة: بيانات الجهاز (نوع الجهاز، نظام التشغيل)،
+        بيانات السجل (Log Data) مثل عنوان IP وسجلات الأخطاء، بيانات الاستخدام (الصفحات والميزات التي
+        تتفاعل معها)، ملفات تعريف الارتباط والتقنيات المشابهة، وبيانات الموقع الجغرافي التقريبي
+        المُستنتجة من عنوان IP لأغراض أمنية.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        ج) معلومات لا نجمعها: لا نجمع عمداً بيانات حساسة كالبيانات الجينية أو البيومترية أو الصحية أو
+        الدينية، ولا نستهدف بخدمتنا أو محتوانا الأطفال دون سن 18 عاماً. إذا علمنا أو توفر لدينا ما يدعو
+        للاعتقاد بأن مستخدماً دون سن 18 عاماً يستخدم الخدمة، سنقوم بالتحقيق وقد نحذف بياناته الشخصية أو
+        حسابه.
       </p>
       <p>
-        This Policy covers arrabai.com, auth.arrabai.com, api.arrabai.com, studio.arrabai.com, and
-        related Arrab properties.
-      </p>
-
-      <h2 id="collect">2. Personal data we collect</h2>
-      <h3>2.1 Data you provide</h3>
-      <ul>
-        <li>Account details (name, email address, password)</li>
-        <li>Profile and workspace settings</li>
-        <li>
-          Billing and payment-related information (processed by our payment provider; we do not
-          store full card PAN/CVV)
-        </li>
-        <li>Support requests and correspondence</li>
-        <li>
-          Content you submit to the Services (prompts, files, configurations) (“Customer Content”)
-        </li>
-      </ul>
-      <h3>2.2 Data collected automatically</h3>
-      <ul>
-        <li>Device and browser information, IP address, approximate location derived from IP</li>
-        <li>Log data (timestamps, request paths, status codes, performance metrics)</li>
-        <li>Authentication and session metadata (including device-linking state identifiers)</li>
-        <li>Usage metrics related to plans, quotas, and features</li>
-      </ul>
-      <h3>2.3 Data from third parties</h3>
-      <p>
-        If you connect third-party services, we may receive account labels, tokens, or metadata
-        necessary to operate the integration, according to your permissions with that provider.
-      </p>
-
-      <h2 id="use">3. How we use personal data</h2>
-      <p>We use personal data to:</p>
-      <ul>
-        <li>Provide, operate, secure, and improve the Services</li>
-        <li>Authenticate users and maintain sessions</li>
-        <li>Process subscriptions, invoices, and entitlements</li>
-        <li>Provide customer support and service notices</li>
-        <li>Monitor abuse, fraud, and security incidents</li>
-        <li>Comply with law and enforce our Terms</li>
-        <li>Analyze aggregate product usage to improve reliability and experience</li>
-      </ul>
-      <p>We do not sell personal data.</p>
-
-      <h2 id="legal-bases">4. Legal bases (where applicable)</h2>
-      <p>Depending on your location, we rely on one or more of the following:</p>
-      <ul>
-        <li>
-          <strong>Contract</strong> — to provide the Services you request
-        </li>
-        <li>
-          <strong>Legitimate interests</strong> — security, product improvement, fraud prevention
-          (balanced against your rights)
-        </li>
-        <li>
-          <strong>Consent</strong> — where required (for example certain cookies or marketing)
-        </li>
-        <li>
-          <strong>Legal obligation</strong> — tax, accounting, and compliance requirements
-        </li>
-      </ul>
-
-      <h2 id="sharing">5. When we share data</h2>
-      <p>We may share personal data with:</p>
-      <ul>
-        <li>
-          Service providers who process data on our instructions (hosting, email, analytics,
-          payments, AI providers)
-        </li>
-        <li>Professional advisers (legal, accounting) under confidentiality</li>
-        <li>Authorities when required by law or to protect rights, safety, and security</li>
-        <li>
-          A successor entity in connection with a merger, acquisition, or asset transfer, subject to
-          appropriate safeguards
-        </li>
-      </ul>
-      <p>We require processors to protect data and use it only for contracted purposes.</p>
-
-      <h2 id="processors">6. Key categories of processors</h2>
-      <ul>
-        <li>
-          <strong>Infrastructure &amp; hosting</strong> — servers and databases that run Arrab
-        </li>
-        <li>
-          <strong>Payments</strong> — Moyasar (or successors) for checkout; card data is handled by
-          the processor
-        </li>
-        <li>
-          <strong>AI model providers</strong> — to generate responses and run model features you
-          invoke (for example Bedrock or OpenRouter)
-        </li>
-        <li>
-          <strong>Security &amp; operations tooling</strong> — logging, monitoring, and abuse
-          detection
-        </li>
-      </ul>
-
-      <h2 id="retention">7. Retention</h2>
-      <p>We retain personal data only as long as needed for the purposes described above, including:</p>
-      <ul>
-        <li>Account data — while your account is active and for a reasonable period afterward</li>
-        <li>Billing records — as required for tax and accounting</li>
-        <li>Security logs — for a limited period for investigation and hardening</li>
-        <li>
-          Customer Content — according to product settings and your deletion requests, subject to
-          legal holds
-        </li>
-      </ul>
-      <p>When data is no longer required, we delete or irreversibly anonymize it.</p>
-
-      <h2 id="security">8. Security</h2>
-      <p>
-        We implement administrative, technical, and organizational measures designed to protect
-        personal data, including encryption in transit, access controls, hashed credentials, and
-        least-privilege practices. No method of transmission or storage is 100% secure; you are
-        responsible for safeguarding your account credentials.
+        A) Personal data you provide to us directly: Account Data (your name, email, and login
+        credentials), payment information if you subscribe to a paid plan, Inputs and Outputs — content
+        you submit in your prompts and the responses the Service generates based on it; if you include
+        personal data in your Inputs, that data may be reproduced in the Outputs we display to you,
+        Communication Data when you contact us, and Feedback you provide, such as your rating of a model
+        response.
       </p>
       <p>
-        Passwords and provider API keys are designed to remain on Arrab’s server-side systems and
-        are not exposed to client applications.
+        B) Personal data we receive automatically from your use of the Service: Device Data (device
+        type, operating system), Log Data such as your IP address and error logs, Usage Data (the pages
+        and features you interact with), cookies and similar technologies, and approximate location data
+        inferred from your IP address for security purposes.
+      </p>
+      <p>
+        C) Information we do not collect: We do not knowingly collect sensitive data such as genetic,
+        biometric, health, or religious information, and our Service or content is not directed at
+        children under 18. If we learn or have reason to suspect a user is under 18, we will investigate
+        and may delete their personal data and/or account.
       </p>
 
-      <h2 id="transfers">9. International transfers</h2>
+      <h2 id="use">
+        2. How We Use Personal Data
+        <span lang="ar" dir="rtl">
+          2. كيفية استخدامنا للبيانات الشخصية
+        </span>
+      </h2>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        نستخدم بياناتك الشخصية للأغراض التالية: تقديم الخدمة وتشغيلها وصيانتها بما في ذلك الميزات
+        الاختيارية، إنشاء حسابك وإدارته وتسهيل عمليات الدفع والرد على استفساراتك، تحسين الخدمة وتطويرها
+        وإجراء البحث بما يشمل تصحيح الأخطاء التقنية، التواصل معك بخصوص تحديثات الخدمة، منع ورصد والتحقيق
+        في الاحتيال وإساءة الاستخدام ومخالفات شروط الاستخدام، الامتثال لالتزاماتنا النظامية وحماية حقوق
+        وسلامة مستخدمينا وآراب والغير، وحل النزاعات وإنفاذ اتفاقياتنا.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        نظراً لأن حلولنا تعتمد على دمج نماذج ذكاء اصطناعي من مزودين خارجيين، فإننا لا نستخدم مُدخلاتك أو
+        مخرجاتك (Inputs / Outputs) لتدريب نماذجنا أو نماذج مزودي الخدمة، ولا نسمح لهم باستخدامها لهذا
+        الغرض، إلا في إحدى الحالات التالية: (1) إذا صُنّفت لمراجعة أمنية (فعندها يجوز لنا تحليلها لتحسين
+        قدرتنا على إنفاذ شروط الاستخدام)، (2) إذا أبلغتنا عنها صراحة كملاحظات (Feedback)، أو (3) إذا
+        وافقت صراحةً على استخدامها لهذا الغرض. يمكنك إدارة تفضيلاتك بخصوص استخدام مُدخلاتك ومخرجاتك
+        لأغراض التدريب من إعدادات حسابك في أي وقت.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        كما نجمّع أو نُخفي هوية البيانات الشخصية بحيث لا تُعرّف بك بعد ذلك، ونستخدمها للأغراض الموضحة
+        أعلاه كتحليل كيفية استخدام الخدمة وتحسينها، وسنحتفظ بها بصيغتها المُخفاة الهوية ولن نحاول إعادة
+        التعرف عليها إلا إذا اقتضى النظام ذلك.
+      </p>
       <p>
-        We may process and store data in countries other than where you live. Where required, we use
-        appropriate safeguards for cross-border transfers (such as contractual clauses or equivalent
-        mechanisms).
+        We use your personal data for the following purposes: to provide, operate, and maintain the
+        Service, including optional features; to create and manage your account, facilitate payments,
+        and respond to inquiries; to improve and develop the Service and conduct research, including
+        debugging technical issues; to communicate with you about Service updates; to prevent, detect,
+        and investigate fraud, abuse, and violations of our Terms of Service; to comply with our legal
+        obligations and protect the rights and safety of our users, Arrab, and third parties; and to
+        investigate and resolve disputes and enforce our agreements.
+      </p>
+      <p>
+        Because our solutions operate by integrating AI models from third-party providers, we do not use
+        your Inputs or Outputs to train our models or the providers&apos; models, and we do not permit
+        them to use this data for that purpose, unless: (1) they are flagged for security review (in
+        which case we may analyze them to improve our ability to enforce our Terms of Service), (2) you
+        explicitly report them to us as Feedback, or (3) you have explicitly agreed to their use for
+        such training purposes. You can manage your preferences regarding the use of your Inputs and
+        Outputs for training purposes at any time in your account settings.
+      </p>
+      <p>
+        We also aggregate or de-identify personal data so that it no longer identifies you, and use it
+        for the purposes described above, such as analyzing how the Service is used and improving it. We
+        will maintain de-identified data in its de-identified form and will not attempt to re-identify
+        it except as required by law.
       </p>
 
-      <h2 id="rights">10. Your rights and choices</h2>
-      <p>Depending on applicable law, you may have rights to:</p>
-      <ul>
-        <li>Access, correct, or delete personal data</li>
-        <li>Object to or restrict certain processing</li>
-        <li>Data portability</li>
-        <li>Withdraw consent where processing is consent-based</li>
-        <li>Lodge a complaint with a supervisory authority</li>
-      </ul>
+      <h2 id="sharing">
+        3. How We Share Personal Data
+        <span lang="ar" dir="rtl">
+          3. كيفية مشاركتنا للبيانات الشخصية
+        </span>
+      </h2>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        قد نُفصح عن بياناتك الشخصية في الحالات التالية:
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        مزودو الخدمات وشركاء الأعمال: بما يشمل تحديداً مزودي نماذج الذكاء الاصطناعي الذين ندمج قدراتهم
+        في خدمتنا لتوليد المخرجات بناءً على مُدخلاتك، بالإضافة إلى مزودي الاستضافة والحوسبة السحابية
+        ومعالجة المدفوعات ودعم العملاء والتحليلات. تعالج هذه الأطراف بياناتك فقط بالقدر اللازم لأداء
+        خدماتها لنا وبناءً على تعليماتنا وموجب اتفاقيات معالجة بيانات تُلزمها بمعايير حماية مماثلة.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        عمليات نقل الأعمال: في حال الاندماج أو الاستحواذ أو إعادة الهيكلة أو الإفلاس، قد يتم الإفصاح عن
+        بياناتك للأطراف المعنية بتلك الصفقة أو نقلها كجزء منها.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        الامتثال القانوني وحماية الحقوق: قد نُفصح عن بياناتك للجهات الحكومية أو أطراف أخرى للامتثال
+        لالتزام نظامي، أو حماية حقوقنا وممتلكاتنا، أو رصد ومنع الاحتيال أو الأنشطة غير القانونية، أو
+        حماية سلامة وأمن مستخدمينا ومنتجاتنا.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        الشركات التابعة: قد نشارك بياناتك مع الشركات التابعة لآراب سلوشنز جلوبال، والتي تلتزم باستخدامها
+        بما يتوافق مع هذه السياسة.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        خدمات وتكاملات الطرف الثالث: إذا اخترت التفاعل مع تكاملات أو روابط لأطراف ثالثة داخل الخدمة، فإن
+        أي بيانات تشاركها معهم تخضع لشروطهم وسياساتهم الخاصة.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        مسؤولو حسابات الأعمال: إذا أنشأت حساباً ببريد إلكتروني تابع لجهة عمل، أو انضممت لحساب مؤسسي، يجوز
+        لمسؤولي ذلك الحساب الاطلاع على بيانات حسابك وإدارتها.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        بموافقتك: قد نُفصح عن بياناتك عند حصولنا على إذنك بذلك.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        لا نبيع بياناتك الشخصية لأي جهة، ولا نشاركها لأغراض الإعلانات السلوكية عبر المواقع.
+      </p>
+      <p>We may disclose your personal data in the following circumstances:</p>
       <p>
-        To exercise rights, contact <a href="mailto:privacy@arrabai.com">privacy@arrabai.com</a>. We
-        may need to verify your identity before fulfilling a request.
+        Service Providers and Business Partners: including specifically the AI model providers whose
+        capabilities we integrate into our Service to generate Outputs based on your Inputs, as well as
+        hosting, cloud infrastructure, payment processing, customer support, and analytics providers.
+        These parties process your data only to the extent necessary to perform their services for us,
+        under our instructions and data processing agreements that bind them to comparable protection
+        standards.
+      </p>
+      <p>
+        Business Transfers: in a merger, acquisition, restructuring, or bankruptcy, your data may be
+        disclosed to the parties involved in that transaction or transferred as part of it.
+      </p>
+      <p>
+        Legal Compliance and Protection of Rights: we may disclose your data to government authorities
+        or other parties to comply with a legal obligation, protect our rights and property, detect or
+        prevent fraud or unlawful activity, or protect the safety and security of our users and
+        products.
+      </p>
+      <p>
+        Affiliates: we may share your data with affiliates of Arrab Solutions Global, who are bound to
+        use it consistent with this Policy.
+      </p>
+      <p>
+        Third-Party Services and Integrations: if you choose to interact with third-party integrations
+        or links within the Service, any data you share with them is governed by their own terms and
+        policies.
+      </p>
+      <p>
+        Business Account Administrators: if you create an account with a work email, or join an
+        organizational account, administrators of that account may access and manage your account data.
+      </p>
+      <p>With Your Consent: we may disclose your data when we have your permission to do so.</p>
+      <p>
+        We do not sell your personal data to any party, and we do not share it for cross-site behavioral
+        advertising purposes.
       </p>
 
-      <h2 id="children">11. Children</h2>
+      <h2 id="retention">
+        4. Retention
+        <span lang="ar" dir="rtl">
+          4. مدة الاحتفاظ بالبيانات
+        </span>
+      </h2>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        نحتفظ ببياناتك الشخصية للمدة اللازمة فقط لتشغيل الخدمة بفعالية ودعم أغراضنا التجارية المشروعة،
+        مثل الامتثال النظامي والأمان وحل النزاعات وإنفاذ اتفاقياتنا. تختلف مدة الاحتفاظ المناسبة باختلاف
+        الغرض من جمع البيانات، وحساسيتها، والمخاطر المحتملة من استخدامها أو الإفصاح عنها، وأي التزامات
+        نظامية معمول بها.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        قد تؤثر إعدادات حسابك أيضاً على مدة احتفاظنا ببعض أنواع البيانات؛ فبعض التفاعلات المؤقتة مع
+        الخدمة قد لا تظهر في سجلك وقد تُخزَّن لمدة محدودة لأغراض السلامة ومراقبة الأنظمة. عندما لا تعود
+        بياناتك الشخصية لازمة، نلتزم نحن ومزودو خدماتنا بإجراءات لحذفها أو محوها أو إخفاء هويتها وفقاً
+        للأنظمة المعمول بها.
+      </p>
       <p>
-        The Services are not directed to children under 18. We do not knowingly collect personal data
-        from children. If you believe a child has provided personal data, contact us and we will take
-        appropriate steps to delete it.
+        We retain your personal data only for as long as necessary to operate the Service effectively
+        and to support legitimate business purposes such as legal compliance, security, dispute
+        resolution, and enforcement of our agreements. The appropriate retention period varies depending
+        on the purpose for which the data was collected, its sensitivity, the potential risk from its
+        use or exposure, and any applicable legal requirements.
+      </p>
+      <p>
+        Your account settings may also affect how long we retain certain data; some temporary
+        interactions with the Service may not appear in your history and may be stored for a limited
+        duration for safety and system-monitoring purposes. When your personal data is no longer needed,
+        we and our service providers follow procedures to delete, erase, or de-identify it in accordance
+        with applicable law.
       </p>
 
-      <h2 id="cookies">12. Cookies and similar technologies</h2>
-      <p>
-        We use essential cookies and local/session storage for authentication, security, and core
-        functionality. We may use limited analytics cookies or similar technologies to understand
-        product usage. Where required by law, we will request consent for non-essential cookies.
+      <h2 id="security">
+        5. Security
+        <span lang="ar" dir="rtl">
+          5. الأمان
+        </span>
+      </h2>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        نطبّق تدابير تقنية وتنظيمية معقولة تجارياً مصمَّمة لحماية بياناتك الشخصية من الفقدان أو سوء
+        الاستخدام أو الوصول أو الإفصاح أو التعديل أو الإتلاف غير المصرح به. مع ذلك، يُرجى العلم أنه لا
+        توجد وسيلة نقل عبر الإنترنت أو تخزين إلكتروني آمنة بشكل كامل، لذا ننصحك بالحرص عند تقديم أي
+        معلومات عبر الخدمة. كذلك لا نتحمل مسؤولية أي تجاوز لإعدادات الخصوصية أو الميزات الأمنية في
+        الخدمة أو في مواقع الطرف الثالث المرتبطة بها.
       </p>
       <p>
-        You can control cookies through your browser settings; disabling essential storage may break
-        sign-in.
-      </p>
-
-      <h2 id="ai-privacy">13. AI processing</h2>
-      <p>
-        When you use AI features, prompts and relevant context may be sent to model providers to
-        generate responses. Do not submit sensitive personal data unless necessary. We configure
-        providers according to our agreements and product settings; provider-specific data handling
-        may also apply.
-      </p>
-      <p>
-        We use technical and organizational controls to reduce unnecessary retention of sensitive
-        content in logs where feasible.
-      </p>
-
-      <h2 id="changes">14. Changes to this Policy</h2>
-      <p>
-        We may update this Privacy Policy from time to time. We will post the updated version at this
-        URL and revise the “Last updated” date. Material changes may be communicated through the
-        Services or by email when appropriate.
+        We implement commercially reasonable technical and organizational measures designed to protect
+        personal data from loss, misuse, and unauthorized access, disclosure, alteration, or
+        destruction. However, please remember that no method of transmission over the internet or method
+        of electronic storage is completely secure, so you should use caution when deciding what
+        information to share through the Service. We are not responsible for any circumvention of privacy
+        settings or security features on the Service or on third-party websites linked through it.
       </p>
 
-      <h2 id="contact">15. Contact</h2>
-      <p>Privacy questions or requests:</p>
-      <ul>
-        <li>
-          Email: <a href="mailto:privacy@arrabai.com">privacy@arrabai.com</a>
-        </li>
-        <li>
-          Legal: <a href="mailto:legal@arrabai.com">legal@arrabai.com</a>
-        </li>
-        <li>
-          Web: <a href="https://arrabai.com/privacy">arrabai.com/privacy</a>
-        </li>
-      </ul>
+      <h2 id="rights">
+        6. Your Rights and Choices
+        <span lang="ar" dir="rtl">
+          6. حقوقك وخياراتك
+        </span>
+      </h2>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        بحسب مكان إقامتك والأنظمة المعمول بها، قد يكون لك عدد من الحقوق المتعلقة ببياناتك الشخصية، تشمل
+        الحق في الاطلاع عليها وحذفها وتصحيحها ونقلها، والاعتراض على معالجتها أو تقييدها، أو سحب موافقتك
+        متى كانت الموافقة هي الأساس النظامي للمعالجة. كما يجوز لك تقديم شكوى إلى الهيئة السعودية
+        للبيانات والذكاء الاصطناعي (SDAIA) بصفتها الجهة المختصة بتطبيق نظام حماية البيانات الشخصية.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        لممارسة أي من هذه الحقوق، يمكنك أنت أو من ينوب عنك رسمياً التواصل معنا على بيانات التواصل
+        الموضحة في نهاية هذه السياسة. قد نطلب منك ما يلزم للتحقق من هويتك قبل معالجة طلبك، وفي حال رفض
+        الطلب يمكنك تقديم تظلم عبر بيانات التواصل ذاتها. لن نميّز ضدك بسبب ممارستك لأي من حقوقك.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        من أبرز الضوابط والحقوق المتاحة لك: معرفة فئات بياناتك التي نجمعها وأغراض استخدامها والجهات التي
+        نشاركها معها، الحصول على نسخة من بياناتك وطلبها بصيغة قابلة للنقل، حذف بياناتك مع مراعاة بعض
+        الاستثناءات، تصحيح أي بيانات غير دقيقة نحتفظ بها — مع ملاحظة أنه نظراً لطبيعة نماذج الذكاء
+        الاصطناعي التوليدية، لا يمكننا ضمان دقة المخرجات (Outputs) بشكل كامل رغم بذلنا جهوداً معقولة
+        لمعالجة طلبات التصحيح، الاعتراض على أنواع معينة من المعالجة، تقييد معالجة بياناتك في حالات
+        محدودة، وسحب موافقتك دون أن يؤثر ذلك على مشروعية المعالجة السابقة.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        كما نؤكد أننا لا نتخذ قرارات تعتمد فقط على معالجة آلية لها أثر جوهري على حقوقك (كالقرارات الصحية
+        أو المالية)، ولا نبيع بياناتك الشخصية أو نشاركها لأغراض الإعلانات السلوكية، ولا نعالج البيانات
+        الحساسة لغرض استنتاج خصائص معينة عنك.
+      </p>
+      <p>
+        Depending on where you live and applicable law, you may have a number of rights relating to your
+        personal data, including the right to access, delete, correct, and transfer it, to object to or
+        restrict how we process it, and to withdraw your consent where processing is based on consent.
+        You may also lodge a complaint with the Saudi Data and AI Authority (SDAIA) as the competent
+        authority for the Personal Data Protection Law.
+      </p>
+      <p>
+        To exercise any of these rights, you or your authorized representative may contact us using the
+        contact details at the end of this Policy. We may request information to verify your identity
+        before processing your request, and if we deny your request you may appeal using the same contact
+        details. We will not discriminate against you for exercising any of your privacy rights.
+      </p>
+      <p>
+        Key controls and rights available to you include: the right to know what categories of data we
+        collect, why we use it, and who we share it with; access and portability, letting you request a
+        copy of your data in a portable format; deletion of your data, subject to certain exceptions;
+        correction of inaccurate data we hold — noting that, given the nature of generative AI models, we
+        cannot fully guarantee the accuracy of Outputs, though we will make reasonable efforts to address
+        correction requests; objection to certain types of processing; restriction of processing in
+        limited circumstances; and withdrawal of consent, which does not affect the lawfulness of prior
+        processing.
+      </p>
+      <p>
+        We also confirm that we do not make decisions based solely on automated processing that have a
+        significant effect on your rights (such as health or financial decisions), we do not sell your
+        personal data or share it for behavioral advertising purposes, and we do not process sensitive
+        data to infer characteristics about you.
+      </p>
+
+      <h2 id="jurisdiction">
+        7. Jurisdiction-Specific Disclosures
+        <span lang="ar" dir="rtl">
+          7. إفصاحات خاصة بالولايات القضائية
+        </span>
+      </h2>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        بصفتنا شركة عالمية تخدم مستخدمين وعملاء في دول متعددة، نُعالج بياناتك الشخصية للأغراض الموضحة في
+        هذه السياسة على خوادم قد تقع في المملكة العربية السعودية أو في الدول التي يتواجد فيها مزودو
+        الخدمات والشركاء الذين نتعامل معهم، بما في ذلك مزودو نماذج الذكاء الاصطناعي. حيثما تختلف أنظمة
+        حماية البيانات باختلاف الدولة، فإننا نطبّق الحماية الموضحة في هذه السياسة على بياناتك أينما تمت
+        معالجتها، ولا نُجري أي عملية نقل عابرة للحدود إلا وفقاً لآليات نقل نظامية سليمة توفر مستوى حماية
+        مناسباً لبياناتك.
+      </p>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        إذا كنت مقيماً في المنطقة الاقتصادية الأوروبية أو المملكة المتحدة أو سويسرا، فقد تتمتع بحقوق
+        إضافية بموجب اللائحة العامة لحماية البيانات (GDPR) أو ما يعادلها من أنظمة محلية، وسنُعامل هذه
+        الحقوق بما يتفق مع تلك الأنظمة إلى جانب الحقوق الموضحة في قسم &quot;حقوقك وخياراتك&quot; أعلاه.
+        وبالمثل، إذا كنت مقيماً في أي ولاية قضائية أخرى تفرض حقوقاً أو إفصاحات إضافية محددة، فسننشر
+        تفاصيلها في هذا القسم أو نوفرها عند الطلب.
+      </p>
+      <p>
+        As a global company serving users and customers in multiple countries, we process your personal
+        data for the purposes described in this Policy on servers that may be located in the Kingdom of
+        Saudi Arabia or in the countries where our service providers and partners operate, including AI
+        model providers. Where data protection laws vary by country, we apply the protections described
+        in this Policy to your data wherever it is processed, and we only carry out cross-border
+        transfers pursuant to legally valid transfer mechanisms that provide an appropriate level of
+        protection for your data.
+      </p>
+      <p>
+        If you are located in the European Economic Area, the United Kingdom, or Switzerland, you may
+        have additional rights under the General Data Protection Regulation (GDPR) or equivalent local
+        laws, and we will honor those rights alongside the rights described in the &quot;Your Rights and
+        Choices&quot; section above. Similarly, if you are located in any other jurisdiction that
+        imposes additional specific rights or disclosures, we will publish the relevant details in this
+        section or provide them upon request.
+      </p>
+
+      <h2 id="changes">
+        8. Privacy Policy Changes
+        <span lang="ar" dir="rtl">
+          8. التعديلات على سياسة الخصوصية
+        </span>
+      </h2>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        قد نُحدّث هذه السياسة من وقت لآخر. عند إجراء أي تعديل، سننشر النسخة المحدّثة وتاريخ سريانها أعلى
+        هذه الصفحة، ما لم يتطلب النظام المعمول به إشعاراً من نوع آخر. استمرارك في استخدام الخدمة بعد أي
+        تعديل على هذه السياسة يُعد موافقة منك على ذلك التعديل.
+      </p>
+      <p>
+        We may update this Policy from time to time. When we do, we will publish an updated version and
+        effective date at the top of this page, unless another type of notice is legally required. Your
+        continued use of the Service after any change to this Policy will constitute your acceptance of
+        that change.
+      </p>
+
+      <h2 id="contact">
+        9. Contacting Us
+        <span lang="ar" dir="rtl">
+          9. التواصل معنا
+        </span>
+      </h2>
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        المتحكم بالبيانات المسؤول عن معالجة بياناتك الشخصية الموضحة في هذه السياسة هو آراب سلوشنز
+        جلوبال، شركة مسجلة في المملكة العربية السعودية بالسجل التجاري رقم 7053712191. نشجعك على التواصل
+        معنا عبر البريد الإلكتروني الموضح في الموقع الرسمي والتطبيق إذا كان لديك أي استفسار بخصوص هذه
+        السياسة أو أردت ممارسة أي من حقوقك الموضحة أعلاه.
+      </p>
+      <p>
+        The Data Controller responsible for the processing of your personal data as described in this
+        Policy is Arrab Solutions Global, a company registered in the Kingdom of Saudi Arabia under
+        Commercial Registration No. 7053712191. We encourage you to contact us via the email address
+        listed on our official website and app if you have any questions about this Policy or wish to
+        exercise any of the rights described above:{' '}
+        <a href="mailto:privacy@arrabai.com">privacy@arrabai.com</a>.
+      </p>
+
+      <p className="bilingual-ar" lang="ar" dir="rtl">
+        لأي استفسار بخصوص هذه الوثيقة، يرجى التواصل عبر البريد الإلكتروني الموضح في الموقع الرسمي أو
+        التطبيق.
+      </p>
+      <p>
+        For any inquiries regarding this document, please contact us via the email address listed on our
+        official website or app:{' '}
+        <a href="mailto:privacy@arrabai.com">privacy@arrabai.com</a>.
+      </p>
 
       <p className="footer">
-        © 2026 Arrab. All rights reserved. Related: <Link href="/terms">Terms of Use</Link>.
+        © 2026 Arrab Solutions Global. All rights reserved. Related:{' '}
+        <Link href="/terms">Terms of Service</Link>.
       </p>
     </LegalDocument>
   );
