@@ -1,0 +1,229 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { LegalDocument } from '@/components/legal/LegalDocument';
+
+export const metadata: Metadata = {
+  title: 'Terms of Use · Arrab',
+  description: 'Arrab Terms of Use — the agreement for using Arrab products and services.',
+};
+
+const toc = [
+  { id: 'agreement', label: '1. Agreement' },
+  { id: 'services', label: '2. Services' },
+  { id: 'accounts', label: '3. Accounts' },
+  { id: 'acceptable-use', label: '4. Acceptable use' },
+  { id: 'ai', label: '5. AI outputs' },
+  { id: 'your-content', label: '6. Your content' },
+  { id: 'plans', label: '7. Plans & billing' },
+  { id: 'ip', label: '8. Intellectual property' },
+  { id: 'third-parties', label: '9. Third parties' },
+  { id: 'disclaimers', label: '10. Disclaimers' },
+  { id: 'liability', label: '11. Liability' },
+  { id: 'termination', label: '12. Termination' },
+  { id: 'changes', label: '13. Changes' },
+  { id: 'law', label: '14. Governing law' },
+  { id: 'contact', label: '15. Contact' },
+];
+
+export default function TermsPage() {
+  return (
+    <LegalDocument
+      title="Terms of Use · Arrab"
+      description="Arrab Terms of Use — the agreement for using Arrab products and services."
+      active="terms"
+      toc={toc}
+    >
+      <p className="eyebrow">Legal</p>
+      <h1>Terms of Use</h1>
+      <p className="meta">Effective: 14 September 2026 · Last updated: 14 September 2026</p>
+      <p className="lead">
+        These Terms of Use (“Terms”) form a binding agreement between you and Arrab (“Arrab”, “we”,
+        “us”) governing your access to and use of Arrab websites, APIs, applications, and related
+        services (collectively, the “Services”).
+      </p>
+
+      <div className="note">
+        By creating an account, signing in, or using the Services, you agree to these Terms and our{' '}
+        <Link href="/privacy">Privacy Policy</Link>. If you do not agree, do not use the Services.
+      </div>
+
+      <h2 id="agreement">1. Agreement to the Terms</h2>
+      <p>
+        If you use the Services on behalf of an organization, you represent that you have authority
+        to bind that organization, and “you” includes that organization. You must be at least 18
+        years old (or the age of majority where you live) to use Arrab.
+      </p>
+
+      <h2 id="services">2. The Services</h2>
+      <p>
+        Arrab provides software and infrastructure for building and operating AI-assisted workforces,
+        including account authentication, plans, billing, APIs, and related tools. Features may
+        change, be added, or be discontinued as we improve the product. We may set usage limits, rate
+        limits, and plan entitlements.
+      </p>
+      <p>
+        Some features require a network connection and may depend on third-party model providers,
+        payment processors, or hosting infrastructure.
+      </p>
+
+      <h2 id="accounts">3. Accounts and security</h2>
+      <p>You are responsible for:</p>
+      <ul>
+        <li>Providing accurate account information</li>
+        <li>Keeping your credentials confidential</li>
+        <li>All activity under your account</li>
+        <li>Promptly notifying us of unauthorized access</li>
+      </ul>
+      <p>
+        We may suspend or terminate accounts that appear compromised, abusive, or in violation of
+        these Terms. Device linking and browser sign-in flows may use short-lived session tokens and
+        device-bound secrets; you must not share those secrets.
+      </p>
+
+      <h2 id="acceptable-use">4. Acceptable use</h2>
+      <p>You agree not to misuse the Services. Without limitation, you will not:</p>
+      <ul>
+        <li>Violate applicable law or third-party rights</li>
+        <li>Attempt unauthorized access to systems, accounts, or data</li>
+        <li>
+          Probe, scan, or overload our infrastructure except as permitted by a written security
+          engagement
+        </li>
+        <li>Upload malware or conduct phishing, fraud, or social engineering</li>
+        <li>
+          Use the Services to develop or distribute weapons, violent crime facilitation, or child
+          sexual exploitation material
+        </li>
+        <li>Bypass plan limits, quotas, authentication, or safety controls</li>
+        <li>Resell or white-label the Services without our prior written consent</li>
+        <li>
+          Misrepresent AI-generated content as solely human-created where disclosure is legally
+          required
+        </li>
+      </ul>
+
+      <h2 id="ai">5. Artificial intelligence outputs</h2>
+      <p>
+        Arrab may generate or facilitate AI outputs (text, code, plans, recommendations, and other
+        content). AI systems can be inaccurate, incomplete, biased, or inappropriate. You are solely
+        responsible for reviewing outputs before relying on them, especially for legal, medical,
+        financial, safety-critical, or production decisions.
+      </p>
+      <p>Unless we expressly agree otherwise in writing:</p>
+      <ul>
+        <li>Outputs are provided “as is”</li>
+        <li>
+          You own your rights in prompts and materials you submit, subject to licenses you grant us
+          to operate the Services
+        </li>
+        <li>
+          We do not guarantee uniqueness, non-infringement, or fitness of outputs for a particular
+          purpose
+        </li>
+      </ul>
+
+      <h2 id="your-content">6. Your content and feedback</h2>
+      <p>
+        You retain ownership of content you submit to the Services (“Customer Content”), including
+        prompts, files, and configurations you upload. You grant Arrab a worldwide, non-exclusive
+        license to host, process, transmit, and display Customer Content solely as needed to provide
+        and secure the Services.
+      </p>
+      <p>If you send feedback or suggestions, we may use them without obligation to you.</p>
+
+      <h2 id="plans">7. Plans, usage, and billing</h2>
+      <p>
+        Paid plans, free tiers, and usage quotas may apply. Prices are typically shown in Saudi Riyal
+        (SAR) unless stated otherwise. Payments may be processed by Moyasar or other payment
+        providers; their terms also apply to checkout.
+      </p>
+      <ul>
+        <li>
+          Fees are generally non-refundable except where required by law or where we state otherwise
+        </li>
+        <li>Taxes may be added where applicable</li>
+        <li>Failure to pay may result in suspension or downgrade</li>
+        <li>We may change plan pricing or entitlements with notice for renewals</li>
+      </ul>
+
+      <h2 id="ip">8. Arrab intellectual property</h2>
+      <p>
+        The Services, including software, branding, documentation, and design, are owned by Arrab or
+        its licensors. These Terms do not transfer ownership of Arrab IP to you. You may not copy,
+        modify, reverse engineer, or create derivative works of the Services except as allowed by law
+        or written permission.
+      </p>
+
+      <h2 id="third-parties">9. Third-party services</h2>
+      <p>
+        The Services may integrate with third parties (for example model providers, Git hosts, or
+        payment processors). Your use of third-party services is subject to their terms and privacy
+        policies. Arrab is not responsible for third-party services we do not control.
+      </p>
+
+      <h2 id="disclaimers">10. Disclaimers</h2>
+      <p>
+        TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE”
+        WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. WE DO NOT
+        WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE, OR THAT AI OUTPUTS
+        WILL BE ACCURATE OR RELIABLE.
+      </p>
+
+      <h2 id="liability">11. Limitation of liability</h2>
+      <p>
+        TO THE MAXIMUM EXTENT PERMITTED BY LAW, ARRAB AND ITS AFFILIATES, OFFICERS, AND SUPPLIERS WILL
+        NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE
+        DAMAGES, OR FOR LOST PROFITS, REVENUE, DATA, OR GOODWILL, EVEN IF ADVISED OF THE POSSIBILITY.
+      </p>
+      <p>
+        OUR AGGREGATE LIABILITY ARISING OUT OF OR RELATING TO THE SERVICES WILL NOT EXCEED THE
+        GREATER OF (A) THE AMOUNTS YOU PAID TO ARRAB FOR THE SERVICES IN THE 12 MONTHS BEFORE THE
+        CLAIM, OR (B) USD 100 (OR LOCAL EQUIVALENT).
+      </p>
+      <p>
+        Some jurisdictions do not allow certain limitations; in those cases, our liability is limited
+        to the fullest extent permitted.
+      </p>
+
+      <h2 id="termination">12. Suspension and termination</h2>
+      <p>
+        You may stop using the Services at any time. We may suspend or terminate access if you
+        violate these Terms, if required by law, or if continuing would create risk for Arrab or
+        others. Upon termination, your right to use the Services ends. Provisions that by nature
+        should survive (including IP, disclaimers, liability limits, and governing law) will survive.
+      </p>
+
+      <h2 id="changes">13. Changes to the Terms</h2>
+      <p>
+        We may update these Terms from time to time. We will post the updated version on this page
+        and update the “Last updated” date. Material changes may also be communicated through the
+        Services or by email when appropriate. Continued use after the effective date constitutes
+        acceptance of the updated Terms.
+      </p>
+
+      <h2 id="law">14. Governing law and disputes</h2>
+      <p>
+        These Terms are governed by the laws of the Kingdom of Saudi Arabia, without regard to
+        conflict-of-law rules, unless mandatory consumer protections in your place of residence
+        require otherwise. Courts located in Riyadh, Saudi Arabia will have exclusive jurisdiction,
+        subject to any non-waivable rights you may have.
+      </p>
+
+      <h2 id="contact">15. Contact</h2>
+      <p>Questions about these Terms:</p>
+      <ul>
+        <li>
+          Email: <a href="mailto:legal@arrabai.com">legal@arrabai.com</a>
+        </li>
+        <li>
+          Web: <a href="https://arrabai.com/terms">arrabai.com/terms</a>
+        </li>
+      </ul>
+
+      <p className="footer">
+        © 2026 Arrab. All rights reserved. Related: <Link href="/privacy">Privacy Policy</Link>.
+      </p>
+    </LegalDocument>
+  );
+}

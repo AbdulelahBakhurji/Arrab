@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { ArrowRight, Bot, BrainCircuit, Check, Code2, Compass, GitBranch, HeartHandshake, Languages, LockKeyhole, Mail, Menu, MessageSquare, Mic2, Moon, Network, ShieldCheck, Sparkles, Sun, Terminal, X } from 'lucide-react';
 
@@ -144,10 +145,31 @@ function ProductCta({ language, title, text, buttonLabel }: { language: Language
   return <section className="product-cta"><img src="/arrab-symbol.png" alt=""/><div><div className="section-label">Arrab · Early access</div><h2>{title}</h2><p>{text}</p><a className="primary-button" href="mailto:info@arrabai.com">{label}<Mail size={16}/></a></div></section>;
 }
 
+function SiteFooter({ language }: { language: Language }) {
+  const copy = language === 'en'
+    ? { privacy: 'Privacy', terms: 'Terms', rights: '© 2026 Arrab' }
+    : { privacy: 'الخصوصية', terms: 'الشروط', rights: '© 2026 عرّاب' };
+  return (
+    <footer className="site-footer">
+      <span>{copy.rights}</span>
+      <nav aria-label={language === 'en' ? 'Legal' : 'قانوني'}>
+        <Link href="/privacy">{copy.privacy}</Link>
+        <Link href="/terms">{copy.terms}</Link>
+      </nav>
+    </footer>
+  );
+}
+
 export function ArrabSite({ view }: { view: View }) {
   const [language, setLanguage] = useState<Language>('en');
   const [dark, setDark] = useState(true);
   useEffect(() => { const storedLanguage = localStorage.getItem('arrab-language') as Language | null; const storedTheme = localStorage.getItem('arrab-theme'); if (storedLanguage === 'ar' || storedLanguage === 'en') setLanguage(storedLanguage); if (storedTheme === 'light') setDark(false); }, []);
   useEffect(() => { document.documentElement.classList.toggle('light', !dark); document.documentElement.lang = language; document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr'; localStorage.setItem('arrab-language', language); localStorage.setItem('arrab-theme', dark ? 'dark' : 'light'); }, [dark, language]);
-  return <div className="site-root" dir={language === 'ar' ? 'rtl' : 'ltr'}><Header language={language} setLanguage={setLanguage} dark={dark} setDark={setDark}/>{view === 'home' ? <HomeView language={language}/> : view === 'studio' ? <StudioView language={language}/> : <VoiceView language={language}/>}</div>;
+  return (
+    <div className="site-root" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+      <Header language={language} setLanguage={setLanguage} dark={dark} setDark={setDark} />
+      {view === 'home' ? <HomeView language={language} /> : view === 'studio' ? <StudioView language={language} /> : <VoiceView language={language} />}
+      <SiteFooter language={language} />
+    </div>
+  );
 }
