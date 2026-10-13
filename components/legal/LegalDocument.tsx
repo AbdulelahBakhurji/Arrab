@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Globe } from 'lucide-react';
+import { Languages } from 'lucide-react';
 import { useEffect, useState, type ReactNode } from 'react';
 
 type TocItem = { id: string; label: string; labelAr?: string };
@@ -40,7 +40,7 @@ export function LegalDocument({
   const [language, setLanguage] = useState<LegalLang>('en');
 
   useEffect(() => {
-    const stored = localStorage.getItem('arrab-legal-lang');
+    const stored = localStorage.getItem('arrab-language');
     if (stored === 'ar' || stored === 'en') setLanguage(stored);
   }, []);
 
@@ -53,7 +53,7 @@ export function LegalDocument({
     document.body.classList.toggle('legal-bilingual', bilingual);
     document.body.classList.toggle('legal-lang-en', language === 'en');
     document.body.classList.toggle('legal-lang-ar', language === 'ar');
-    localStorage.setItem('arrab-legal-lang', language);
+    localStorage.setItem('arrab-language', language);
     const theme = document.querySelector('meta[name="theme-color"]');
     if (theme) theme.setAttribute('content', '#f7f7f8');
     return () => {
@@ -63,17 +63,17 @@ export function LegalDocument({
 
   return (
     <>
-      <link rel="stylesheet" href="/legal/styles.css?v=7" />
+      <link rel="stylesheet" href="/legal/styles.css?v=9" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
       <meta name="description" content={description} />
       <header className="topbar">
-        <Link className="brand" href="/">
-          <img src="/legal/assets/logotall-white.png?v=1" alt="Arrab" />
+        <Link className="brand" href="/" aria-label="Arrab">
+          <img src="/arrab-logo-white.png" alt="Arrab" />
         </Link>
         <div className="topbar-actions">
           {bilingual && (
@@ -82,9 +82,8 @@ export function LegalDocument({
               className="lang-icon-button"
               onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
               aria-label={language === 'en' ? 'Switch to Arabic' : 'التبديل إلى الإنجليزية'}
-              title={language === 'en' ? 'العربية' : 'English'}
             >
-              <Globe size={18} strokeWidth={1.75} aria-hidden="true" />
+              <Languages size={18} strokeWidth={1.5} />
             </button>
           )}
           <nav className="top-links" aria-label="Legal">

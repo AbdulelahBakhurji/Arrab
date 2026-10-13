@@ -1,11 +1,5 @@
-import type { Metadata } from 'next';
-import { ArrabSite } from '../site';
+import { redirect } from 'next/navigation';
 
-export const metadata: Metadata = {
-  title: 'Arrab Studio — Build your AI workforce',
-  description: 'Create AI employees and multi-agent teams inside one connected AI workspace.',
-};
-
-export default function StudioPage() {
-  return <ArrabSite view="studio" />;
+export default function StudioRedirect() {
+  redirect('/explore');
 }

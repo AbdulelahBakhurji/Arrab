@@ -118,7 +118,27 @@ a:hover { color: #0b3ec7; }
 }
 
 .toc {
-  display: none;
+  display: block;
+  overflow-x: auto;
+}
+
+@media (max-width: 959px) {
+  .toc {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding: 0.6rem 0;
+    background: var(--bg);
+  }
+  .toc ol {
+    display: flex;
+    gap: 0.35rem;
+    width: max-content;
+  }
+  .toc a {
+    white-space: nowrap;
+    border: 1px solid var(--line);
+  }
 }
 
 @media (min-width: 960px) {
@@ -163,6 +183,11 @@ a:hover { color: #0b3ec7; }
 .toc a:hover {
   color: var(--ink);
   background: rgba(0, 0, 0, 0.04);
+}
+
+.article h1,
+.article h2 {
+  scroll-margin-top: 5.5rem;
 }
 
 .article {
@@ -313,7 +338,7 @@ a:hover { color: #0b3ec7; }
 
 /* Bilingual legal documents (EN + AR) */
 :root {
-  --font-ar: "IBM Plex Sans Arabic", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+  --font-ar: "Cairo", Tahoma, Arial, sans-serif;
 }
 
 .article-bilingual h1 {
