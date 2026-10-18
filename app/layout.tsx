@@ -8,7 +8,6 @@ const cairo = Cairo({ subsets: ['arabic', 'latin'], variable: '--font-arabic' })
 export const metadata: Metadata = {
   title: 'Stay tuned · Arrab',
   description: 'Arrab is on the way.',
-  icons: { icon: '/arrab-logo-white.png' },
   robots: { index: false, follow: false },
 };
 
